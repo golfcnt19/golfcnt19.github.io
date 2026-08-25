@@ -102,6 +102,8 @@ const CONTENT = {
         { group: "Requirements", note: "เก็บ requirement และทำงานร่วมกับทีม",
           items: ["Jira", "Miro", "Figma", "Requirement Analysis"] },
         { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["IntelliJ IDEA", "Android Studio", "VS Code", "Git", "GitHub"] },
+        { group: "AI",       note: "ใช้ช่วยงานพัฒนาในแต่ละวัน",
+          items: ["Claude", "GitHub Copilot", "ChatGPT", "Codex", "Gemini"] },
       ],
     },
 
@@ -263,6 +265,8 @@ const CONTENT = {
         { group: "Requirements", note: "Gathering requirements and working with the team",
           items: ["Jira", "Miro", "Figma", "Requirement Analysis"] },
         { group: "Tools",    note: "Daily drivers",       items: ["IntelliJ IDEA", "Android Studio", "VS Code", "Git", "GitHub"] },
+        { group: "AI",       note: "Day-to-day development assistants",
+          items: ["Claude", "GitHub Copilot", "ChatGPT", "Codex", "Gemini"] },
       ],
     },
 
