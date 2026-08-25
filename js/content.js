@@ -62,8 +62,8 @@ const CONTENT = {
         "ทำเว็บด้วย Angular กับ TypeScript เขียนแอปมือถือด้วย Flutter และ Kotlin",
 
         "งานในระบบธนาคารสอนให้ให้ความสำคัญกับความถูกต้องของข้อมูลและความน่าเชื่อถือของระบบ " +
-        "คุ้นเคยกับฐานข้อมูลระดับองค์กรทั้ง Oracle, SQL Server, MySQL และ PostgreSQL " +
-        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง",
+        "นอกจากเขียนโค้ดแล้วยังทำ load test ด้วย JMeter และเขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium " +
+        "เพื่อให้มั่นใจว่าระบบรับโหลดจริงไหว ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง",
       ],
       factsLabel: "ข้อมูลโดยย่อ",
       facts: [
@@ -92,8 +92,9 @@ const CONTENT = {
         // TODO ปรับกลุ่มและรายการให้ตรงกับที่คุณใช้จริง
         { group: "Mobile",   note: "แอปมือถือ ทั้ง cross-platform และ native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "เว็บแอป",                items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "PHP", "REST API"] },
+        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
         { group: "Database", note: "ออกแบบและเขียน query",   items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
+        { group: "Testing",  note: "ทดสอบโหลดและเขียนสคริปต์อัตโนมัติ", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
         { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
     },
@@ -131,8 +132,9 @@ const CONTENT = {
           org: "ธนาคารกรุงศรีอยุธยา (Bank of Ayudhya)",
           // TODO เขียนแทนบรรทัดนี้ — ดูแลระบบอะไร ทีมกี่คน ผลลัพธ์ที่วัดได้
           desc: "พัฒนาและดูแลระบบของธนาคาร ครอบคลุมทั้งงานฝั่งเว็บ ฐานข้อมูล " +
-                "และแอปมือถือด้วย Flutter และ Kotlin",
-          tags: ["Java", "Angular", "Flutter", "Kotlin", "Oracle", "SQL Server"],
+                "และแอปมือถือด้วย Flutter และ Kotlin " +
+                "รวมถึงทำ load test ด้วย JMeter และเขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium",
+          tags: ["Java", "Spring", "Angular", "Flutter", "Kotlin", "Oracle", "JMeter", "Appium"],
         },
         {
           // TODO ยืนยันช่วงปี — คำนวณจาก 5 ปีก่อนเข้าธนาคาร
@@ -217,9 +219,9 @@ const CONTENT = {
         "frontends in Angular and TypeScript, mobile apps in Flutter and Kotlin.",
 
         "Working on banking systems taught me to take data correctness and reliability " +
-        "seriously. I am at home in enterprise databases — Oracle, SQL Server, MySQL and " +
-        "PostgreSQL — and I like owning a feature from the schema to the button someone " +
-        "actually taps.",
+        "seriously. Beyond writing code I run load tests with JMeter and write automated " +
+        "test scripts with Appium, so I know a system holds up before it ships. I like " +
+        "owning a feature from the schema to the button someone actually taps.",
       ],
       factsLabel: "Quick Facts",
       facts: [
@@ -246,8 +248,9 @@ const CONTENT = {
       groups: [
         { group: "Mobile",   note: "Cross-platform and native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "Web applications",    items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "Server side",         items: ["Java", "PHP", "REST API"] },
+        { group: "Backend",  note: "Server side",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
         { group: "Database", note: "Schema design and queries", items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
+        { group: "Testing",  note: "Load testing and automation", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
         { group: "Tools",    note: "Daily drivers",       items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
     },
@@ -269,8 +272,8 @@ const CONTENT = {
           period: "2019 — Present · 7 years",
           role: "Software Engineer",
           org: "Bank of Ayudhya (Krungsri)",
-          desc: "Building and maintaining banking systems across web, database and mobile — including Flutter and Kotlin apps.",
-          tags: ["Java", "Angular", "Flutter", "Kotlin", "Oracle", "SQL Server"],
+          desc: "Building and maintaining banking systems across web, database and mobile — including Flutter and Kotlin apps — plus load testing with JMeter and automated test scripts with Appium.",
+          tags: ["Java", "Spring", "Angular", "Flutter", "Kotlin", "Oracle", "JMeter", "Appium"],
         },
         {
           period: "2014 — 2019 · 5 years",
