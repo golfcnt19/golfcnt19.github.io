@@ -327,7 +327,7 @@ const CONTENT = {
     },
 
     ui: {
-      langSwitch: "ไทย",
+      langSwitch: "TH",
       langSwitchTitle: "เปลี่ยนเป็นภาษาไทย",
       menu: "Menu",
       viewRepo: "Code",
