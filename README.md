@@ -70,18 +70,23 @@ npx --yes serve . -l 4173
 
 ## Deploy
 
-push ขึ้น `main` แล้วรอ 1–2 นาที GitHub Pages อัปเดตให้เอง
+**ตั้งค่าเรียบร้อยแล้ว** — GitHub Pages เสิร์ฟ branch `main` จาก root
+แก้ไฟล์แล้ว push ขึ้น `main` เว็บจะอัปเดตเองใน 1–2 นาที
 
 ```bash
 git add -A; git commit -m "update content"; git push
 ```
 
-### ตั้งค่าครั้งแรกครั้งเดียว
+### ค่าที่ตั้งไว้
 
-1. repo ต้องชื่อ `golfcnt19.github.io` เป๊ะ ๆ และเป็น **public**
-2. ไปที่ Settings → Pages
-3. Source เลือก **Deploy from a branch**
-4. Branch เลือก `main` โฟลเดอร์ `/ (root)` แล้วกด Save
+| | |
+|---|---|
+| repo | `golfcnt19.github.io` — ชื่อต้องเป็น `<username>.github.io` เป๊ะ ๆ GitHub ถึงเสิร์ฟที่ root |
+| visibility | public (GitHub Pages ฟรีใช้กับ private ไม่ได้) |
+| Pages source | Deploy from a branch · `main` · `/ (root)` |
+
+ถ้าเปลี่ยนชื่อ repo เมื่อไร URL จะกลายเป็น `golfcnt19.github.io/<ชื่อ-repo>/` แทน root
+ซึ่งจะทำให้ `canonical` กับ `og:url` ใน `index.html` ผิด ต้องตามแก้ด้วย
 
 ไฟล์ `.nojekyll` ที่อยู่ใน repo มีไว้กัน GitHub Pages ประมวลผลแบบ Jekyll
 ซึ่งจะทำให้โฟลเดอร์ที่ขึ้นต้นด้วย `_` หายไป — อย่าลบไฟล์นี้
