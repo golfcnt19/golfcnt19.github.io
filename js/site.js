@@ -164,6 +164,65 @@
     }).join("");
   }
 
+  /* section ไหนไม่มีรายการเลย ให้ซ่อนทั้ง section พร้อมลิงก์ในเมนู
+     จะได้ไม่เหลือหัวข้อลอย ๆ ที่ไม่มีเนื้อหา — พอเติมรายการใน content.js
+     กลับเข้าไป section ก็โผล่มาเอง ไม่ต้องแก้ HTML */
+  var COLLECTIONS = [
+    { list: "#skillsGrid",     section: "#skills" },
+    { list: "#projectsGrid",   section: "#projects" },
+    { list: "#experienceList", section: "#experience" },
+    { list: "#educationList",  section: "#education" },
+  ];
+
+  function syncEmptySections() {
+    COLLECTIONS.forEach(function (c) {
+      var list = $(c.list);
+      var section = $(c.section);
+      if (!list || !section) return;
+      section.hidden = list.children.length === 0;
+    });
+
+    // ลิงก์ที่ชี้ไป section ที่ซ่อนอยู่จะกลายเป็นปุ่มกดแล้วไม่ไปไหน
+    // ในเมนูให้ซ่อนลิงก์ทิ้ง ส่วนปุ่มอื่น (เช่น CTA ใน hero) ให้เบนไป
+    // section ถัดไปที่ยังแสดงอยู่แทน
+    var all = $$("main section[id]");
+
+    // จำปลายทางเดิมไว้ครั้งแรก จะได้คืนค่าได้ถ้าภายหลัง section กลับมาแสดง
+    $$('a[href^="#"]').forEach(function (a) {
+      if (!a.dataset.target) a.dataset.target = a.getAttribute("href");
+    });
+
+    all.forEach(function (section) {
+      var links = $$('a[data-target="#' + section.id + '"]');
+      if (!links.length) return;
+
+      if (!section.hidden) {
+        links.forEach(function (a) {
+          a.hidden = false;
+          a.setAttribute("href", a.dataset.target);
+        });
+        return;
+      }
+
+      var fallback = nextVisibleAfter(section);
+      links.forEach(function (a) {
+        if (a.closest("#navLinks")) a.hidden = true;
+        else if (fallback) a.setAttribute("href", "#" + fallback.id);
+      });
+    });
+
+    function nextVisibleAfter(section) {
+      var i = all.indexOf(section);
+      for (var j = i + 1; j < all.length; j++) {
+        if (!all[j].hidden) return all[j];
+      }
+      for (var k = i - 1; k >= 0; k--) {
+        if (!all[k].hidden) return all[k];
+      }
+      return null;
+    }
+  }
+
   function renderContact(d) {
     var mail = CONTENT.meta.email || "";
 
@@ -203,6 +262,7 @@
     renderTimeline("#experienceList", d.experience && d.experience.items, false);
     renderTimeline("#educationList", d.education && d.education.items, true);
     renderContact(d);
+    syncEmptySections();
 
     observeReveals();
     saveLang(lang);

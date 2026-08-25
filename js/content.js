@@ -102,36 +102,21 @@ const CONTENT = {
       eyebrow: "ผลงาน",
       title: "โปรเจคที่เลือกมา",
       lead: "งานที่ทำแล้วได้เรียนรู้อะไรบางอย่าง",
-      // TODO แทนที่ด้วยโปรเจคจริง — ลบ/เพิ่มบล็อกได้ตามต้องการ
-      items: [
-        {
-          name: "bayFlutter",
-          kind: "Mobile App",
-          desc: "แอปมือถือที่เขียนด้วย Flutter ฝึกการวางโครงหน้าจอและจัดการ state",
-          tags: ["Flutter", "Dart"],
-          repo: "https://github.com/golfcnt19/bayFlutter",
-          live: "",
-          highlight: true,
-        },
-        {
-          name: "project-angular",
-          kind: "Web App",
-          desc: "เว็บแอปที่ใช้ Angular กับ TypeScript ฝึกโครงสร้าง component และ routing",
-          tags: ["Angular", "TypeScript"],
-          repo: "https://github.com/golfcnt19/project-angular",
-          live: "",
-          highlight: false,
-        },
-        {
-          name: "my_flutter",
-          kind: "Mobile App",
-          desc: "โปรเจคทดลอง Flutter ทดสอบ widget และการเชื่อมต่อข้อมูล",
-          tags: ["Flutter", "Dart"],
-          repo: "https://github.com/golfcnt19/my_flutter",
-          live: "",
-          highlight: false,
-        },
-      ],
+
+      /* ว่างไว้ก่อน — section "ผลงาน" จะถูกซ่อนอัตโนมัติทั้ง section
+         พร้อมลิงก์ในเมนู จนกว่าจะมีรายการอย่างน้อยหนึ่งอัน
+
+         เวลาจะเพิ่ม ให้ก๊อปบล็อกนี้ใส่ใน items แล้วอย่าลืมเพิ่มใน en ด้วย
+         {
+           name: "ชื่อโปรเจค",
+           kind: "Web App",        // ป้ายเล็กมุมบนของการ์ด
+           desc: "ทำอะไร แก้ปัญหาอะไร",
+           tags: ["Java", "Oracle"],
+           repo: "",               // URL ของ repo หรือเว้นว่าง
+           live: "",               // URL เว็บจริง หรือเว้นว่าง
+           highlight: false,       // true = การ์ดเด่น มีป้าย FEATURED
+         },                                                              */
+      items: [],
     },
 
     experience: {
@@ -269,35 +254,8 @@ const CONTENT = {
       eyebrow: "Selected Work",
       title: "Projects",
       lead: "Work that taught me something.",
-      items: [
-        {
-          name: "bayFlutter",
-          kind: "Mobile App",
-          desc: "A Flutter mobile app — practice in screen architecture and state management.",
-          tags: ["Flutter", "Dart"],
-          repo: "https://github.com/golfcnt19/bayFlutter",
-          live: "",
-          highlight: true,
-        },
-        {
-          name: "project-angular",
-          kind: "Web App",
-          desc: "An Angular and TypeScript web app — component structure and routing.",
-          tags: ["Angular", "TypeScript"],
-          repo: "https://github.com/golfcnt19/project-angular",
-          live: "",
-          highlight: false,
-        },
-        {
-          name: "my_flutter",
-          kind: "Mobile App",
-          desc: "A Flutter sandbox for testing widgets and data binding.",
-          tags: ["Flutter", "Dart"],
-          repo: "https://github.com/golfcnt19/my_flutter",
-          live: "",
-          highlight: false,
-        },
-      ],
+      // ต้องมีจำนวนรายการเท่ากับฝั่ง th เสมอ — ตอนนี้ว่างทั้งคู่
+      items: [],
     },
 
     experience: {
