@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chanathip Jaidee — Mobile &amp; Web Developer</title>
+<meta name="description" content="Portfolio of Chanathip Jaidee (golfcnt19) — mobile and web developer working with Flutter, Dart, Angular and TypeScript.">
+<meta name="author" content="Chanathip Jaidee">
+<meta name="theme-color" content="#070b0d">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chanathip Jaidee — Mobile &amp; Web Developer">
+<meta property="og:description" content="Mobile and web developer working with Flutter, Dart, Angular and TypeScript.">
+<meta property="og:url" content="https://golfcnt19.github.io/">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://golfcnt19.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23070b0d'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%234fd1c5' text-anchor='middle'>CJ</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ══ NAV ══════════════════════════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Home">
+      <span class="nav__mark" data-bind="meta.initials">CJ</span>
+      <span class="nav__handle" data-bind="meta.handle">golfcnt19</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Sections">
+      <a href="#about"      data-i18n="nav.about">About</a>
+      <a href="#skills"     data-i18n="nav.skills">Skills</a>
+      <a href="#projects"   data-i18n="nav.projects">Work</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#education"  data-i18n="nav.education">Education</a>
+      <a href="#contact"    data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="lang" id="langBtn" type="button" data-i18n="ui.langSwitch" data-i18n-title="ui.langSwitchTitle">ไทย</button>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══ HERO ═════════════════════════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+
+    <p class="status reveal">
+      <span class="status__dot" aria-hidden="true"></span>
+      <span data-i18n="hero.status">Open to new opportunities</span>
+    </p>
+
+    <h1 class="hero__name reveal" data-bind="meta.name">Chanathip Jaidee</h1>
+
+    <p class="hero__role mono reveal" data-i18n="hero.role">MOBILE &amp; WEB DEVELOPER</p>
+
+    <p class="hero__tagline reveal" data-i18n="hero.tagline">
+      Building mobile apps with Flutter and web apps with Angular. Drawn to work that ships to real users.
+    </p>
+
+    <div class="hero__cta reveal">
+      <a class="btn btn--solid" href="#projects" data-i18n="hero.ctaPrimary">View Work</a>
+      <a class="btn btn--ghost" href="#contact"  data-i18n="hero.ctaSecondary">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll mono" aria-hidden="true">
+    <span data-i18n="hero.scrollHint">Scroll</span>
+    <span class="hero__scrollbar"></span>
+  </div>
+</section>
+
+<!-- ══ ABOUT ════════════════════════════════════════════════════════════ -->
+<section class="sec sec--alt" id="about">
+  <div class="wrap">
+    <p class="eyebrow mono reveal" data-i18n="about.eyebrow">Background</p>
+    <h2 class="sec__title reveal" data-i18n="about.title">About Me</h2>
+
+    <div class="about">
+      <div class="about__body reveal" id="aboutBody">
+        <p>I am a developer focused on mobile and web. I started with Flutter projects and moved into Angular and TypeScript. I like work where the result is a screen someone actually taps.</p>
+        <p>Currently looking for a team that cares about code quality and where there are people to learn from.</p>
+      </div>
+
+      <aside class="facts reveal">
+        <p class="facts__label mono" data-i18n="about.factsLabel">Quick Facts</p>
+        <dl class="facts__list" id="factsList"></dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ════════════════════════════════════════════════════════════ -->
+<section class="sec sec--tight" aria-label="Key numbers">
+  <div class="wrap">
+    <div class="stats" id="statsGrid"></div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ═══════════════════════════════════════════════════════════ -->
+<section class="sec sec--alt" id="skills">
+  <div class="wrap">
+    <p class="eyebrow mono reveal" data-i18n="skills.eyebrow">Capabilities</p>
+    <h2 class="sec__title reveal" data-i18n="skills.title">Skills &amp; Tools</h2>
+    <p class="sec__lead reveal" data-i18n="skills.lead">Technologies I work with regularly.</p>
+
+    <div class="skills" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ═════════════════════════════════════════════════════════ -->
+<section class="sec" id="projects">
+  <div class="wrap">
+    <p class="eyebrow mono reveal" data-i18n="projects.eyebrow">Selected Work</p>
+    <h2 class="sec__title reveal" data-i18n="projects.title">Projects</h2>
+    <p class="sec__lead reveal" data-i18n="projects.lead">Work that taught me something.</p>
+
+    <div class="projects" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE ═══════════════════════════════════════════════════════ -->
+<section class="sec sec--alt" id="experience">
+  <div class="wrap">
+    <p class="eyebrow mono reveal" data-i18n="experience.eyebrow">Track Record</p>
+    <h2 class="sec__title reveal" data-i18n="experience.title">Experience</h2>
+
+    <ol class="timeline" id="experienceList"></ol>
+  </div>
+</section>
+
+<!-- ══ EDUCATION ════════════════════════════════════════════════════════ -->
+<section class="sec" id="education">
+  <div class="wrap">
+    <p class="eyebrow mono reveal" data-i18n="education.eyebrow">Foundation</p>
+    <h2 class="sec__title reveal" data-i18n="education.title">Education</h2>
+
+    <ol class="timeline timeline--compact" id="educationList"></ol>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══════════════════════════════════════════════════════════ -->
+<section class="sec sec--alt" id="contact">
+  <div class="wrap contact">
+    <p class="eyebrow mono reveal" data-i18n="contact.eyebrow">Contact</p>
+    <h2 class="sec__title reveal" data-i18n="contact.title">Let's Talk</h2>
+    <p class="sec__lead sec__lead--wide reveal" data-i18n="contact.lead">
+      Interested in working together or want to talk about a project? Send an email — I reply to every one.
+    </p>
+
+    <p class="contact__mail mono reveal" id="contactMail"></p>
+
+    <div class="contact__cta reveal">
+      <a class="btn btn--solid" id="mailLink" href="#" data-i18n="contact.emailLabel">Send Email</a>
+      <button class="btn btn--ghost" id="copyBtn" type="button" data-i18n="contact.copyLabel">Copy Email</button>
+    </div>
+
+    <ul class="contact__links reveal" id="contactLinks"></ul>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p class="mono foot__copy">
+      <span>&copy; <span id="year">2026</span></span>
+      <span data-bind="meta.name">Chanathip Jaidee</span>
+    </p>
+    <p class="mono foot__built" data-i18n="footer.builtWith">Built with plain HTML, CSS and JavaScript</p>
+    <a class="mono foot__top" href="#top" data-i18n="footer.backToTop">Back to top</a>
+  </div>
+</footer>
+
+<noscript>
+  <div class="noscript">
+    <p><strong>JavaScript is disabled.</strong> The sections above show the English version only, and the skills, project, experience and education lists cannot render. Enable JavaScript, or reach me directly at <a href="https://github.com/golfcnt19">github.com/golfcnt19</a>.</p>
+  </div>
+</noscript>
+
+<script src="js/content.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
