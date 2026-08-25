@@ -130,8 +130,9 @@ const CONTENT = {
           role: "Software Engineer",
           org: "ธนาคารกรุงศรีอยุธยา (Bank of Ayudhya)",
           // TODO เขียนแทนบรรทัดนี้ — ดูแลระบบอะไร ทีมกี่คน ผลลัพธ์ที่วัดได้
-          desc: "พัฒนาและดูแลระบบภายในของธนาคาร ทำงานทั้งฝั่งแอปพลิเคชันและฐานข้อมูล",
-          tags: ["Java", "Angular", "Oracle", "SQL Server"],
+          desc: "พัฒนาและดูแลระบบของธนาคาร ครอบคลุมทั้งงานฝั่งเว็บ ฐานข้อมูล " +
+                "และแอปมือถือด้วย Flutter และ Kotlin",
+          tags: ["Java", "Angular", "Flutter", "Kotlin", "Oracle", "SQL Server"],
         },
         {
           // TODO ยืนยันช่วงปี — คำนวณจาก 5 ปีก่อนเข้าธนาคาร
@@ -268,8 +269,8 @@ const CONTENT = {
           period: "2019 — Present · 7 years",
           role: "Software Engineer",
           org: "Bank of Ayudhya (Krungsri)",
-          desc: "Building and maintaining internal banking systems, working across both the application layer and the database.",
-          tags: ["Java", "Angular", "Oracle", "SQL Server"],
+          desc: "Building and maintaining banking systems across web, database and mobile — including Flutter and Kotlin apps.",
+          tags: ["Java", "Angular", "Flutter", "Kotlin", "Oracle", "SQL Server"],
         },
         {
           period: "2014 — 2019 · 5 years",
