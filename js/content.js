@@ -42,10 +42,10 @@ const CONTENT = {
 
     hero: {
       status: "เปิดรับโอกาสใหม่",              // TODO หรือ "ไม่ว่างรับงาน"
-      role: "FULL STACK DEVELOPER",
+      role: "SOFTWARE ENGINEER · FULL STACK",
       tagline:
-        "ทำงานได้ตั้งแต่ฝั่งเซิร์ฟเวอร์ถึงหน้าจอ — Angular, Flutter, Java และ Kotlin " +
-        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ต้นจนจบ",
+        "7 ปีในระบบธนาคาร ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — " +
+        "Java, Angular, Flutter และ Kotlin",
       ctaPrimary: "ดูผลงาน",
       ctaSecondary: "ติดต่อผม",
       scrollHint: "เลื่อนลง",
@@ -56,18 +56,19 @@ const CONTENT = {
       title: "เกี่ยวกับผม",
       body: [
         // TODO เขียนแทนสองย่อหน้านี้ — เพิ่มหรือลดย่อหน้าได้
-        "ผมเป็น full stack developer ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ " +
-        "เขียนแอปมือถือด้วย Flutter และ Kotlin ทำเว็บด้วย Angular กับ TypeScript " +
-        "ทำ service ฝั่งหลังบ้านด้วย Java และทำงานกับฐานข้อมูลได้หลายตัว " +
-        "ทั้ง SQL Server, MySQL, Oracle และ PostgreSQL",
+        "ผมเป็น software engineer ประสบการณ์ 7 ปีที่ธนาคารกรุงศรีอยุธยา " +
+        "ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — เขียน service ฝั่งหลังบ้านด้วย Java " +
+        "ทำเว็บด้วย Angular กับ TypeScript เขียนแอปมือถือด้วย Flutter และ Kotlin",
 
-        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง " +
-        "กำลังมองหาทีมที่ให้ความสำคัญกับคุณภาพของโค้ด และมีคนที่เก่งกว่าให้เรียนรู้",
+        "งานในระบบธนาคารสอนให้ให้ความสำคัญกับความถูกต้องของข้อมูลและความน่าเชื่อถือของระบบ " +
+        "คุ้นเคยกับฐานข้อมูลระดับองค์กรทั้ง Oracle, SQL Server, MySQL และ PostgreSQL " +
+        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง",
       ],
       factsLabel: "ข้อมูลโดยย่อ",
       facts: [
         { k: "ที่อยู่",     v: "ประเทศไทย" },          // TODO จังหวัด
-        { k: "บทบาท",      v: "Full Stack Developer" },
+        { k: "บทบาท",      v: "Software Engineer" },
+        { k: "ประสบการณ์", v: "7 ปี · ธนาคารกรุงศรีอยุธยา" },
         { k: "ภาษา",       v: "ไทย (เจ้าของภาษา) · อังกฤษ" },
         { k: "ถนัด",       v: "Angular · Flutter · Java" },
       ],
@@ -76,9 +77,9 @@ const CONTENT = {
     stats: {
       // value เป็นตัวเลขล้วน ระบบจะนับขึ้นให้เอง
       items: [
-        { value: 5,  suffix: "+", label: "โปรเจคที่ทำ" },       // TODO
-        { value: 3,  suffix: "+", label: "ปีที่เขียนโค้ด" },     // TODO
-        { value: 4,  suffix: "",  label: "ภาษาที่ใช้ได้" },      // TODO
+        { value: 7,  suffix: "",  label: "ปีประสบการณ์" },
+        { value: 5,  suffix: "+", label: "โปรเจคที่ทำ" },       // TODO ใส่จำนวนจริง
+        { value: 4,  suffix: "",  label: "ฐานข้อมูลที่ใช้ได้" },
       ],
     },
 
@@ -135,14 +136,15 @@ const CONTENT = {
     experience: {
       eyebrow: "เส้นทาง",
       title: "ประสบการณ์",
-      // TODO ใส่ประสบการณ์จริง ถ้ายังไม่มีให้ลบทั้ง items เหลือ []
       items: [
         {
-          period: "2566 — ปัจจุบัน",
-          role: "Developer",
-          org: "TODO ชื่อบริษัท",
-          desc: "TODO สรุปสั้น ๆ ว่าทำอะไร ดูแลส่วนไหน ใช้เทคโนโลยีอะไร",
-          tags: ["Flutter", "Angular"],
+          // TODO ยืนยันปีเริ่ม — ผมคำนวณ 2562 จาก "7 ปี" นับถอยหลังจากปีนี้
+          period: "2562 — ปัจจุบัน · 7 ปี",
+          role: "Software Engineer",
+          org: "ธนาคารกรุงศรีอยุธยา (Bank of Ayudhya)",
+          // TODO เขียนแทนบรรทัดนี้ — ดูแลระบบอะไร ทีมกี่คน ผลลัพธ์ที่วัดได้
+          desc: "พัฒนาและดูแลระบบภายในของธนาคาร ทำงานทั้งฝั่งแอปพลิเคชันและฐานข้อมูล",
+          tags: ["Java", "Angular", "Oracle", "SQL Server"],
         },
       ],
     },
@@ -197,10 +199,10 @@ const CONTENT = {
 
     hero: {
       status: "Open to new opportunities",
-      role: "FULL STACK DEVELOPER",
+      role: "SOFTWARE ENGINEER · FULL STACK",
       tagline:
-        "Working from the server through to the screen — Angular, Flutter, Java and Kotlin. " +
-        "Drawn to owning a feature end to end.",
+        "Seven years in banking systems, working from the database through to the screen — " +
+        "Java, Angular, Flutter and Kotlin.",
       ctaPrimary: "View Work",
       ctaSecondary: "Get In Touch",
       scrollHint: "Scroll",
@@ -210,19 +212,20 @@ const CONTENT = {
       eyebrow: "Background",
       title: "About Me",
       body: [
-        "I am a full stack developer, comfortable from the database up to the screen. " +
-        "I build mobile apps with Flutter and Kotlin, web frontends with Angular and " +
-        "TypeScript, services with Java, and I work across SQL Server, MySQL, Oracle " +
-        "and PostgreSQL.",
+        "I am a software engineer with 7 years at Bank of Ayudhya (Krungsri), comfortable " +
+        "from the database up to the screen — services in Java, web frontends in Angular " +
+        "and TypeScript, mobile apps in Flutter and Kotlin.",
 
-        "I like owning a feature end to end, from the schema to the button someone actually " +
-        "taps. Currently looking for a team that cares about code quality and where there " +
-        "are people to learn from.",
+        "Working on banking systems taught me to take data correctness and reliability " +
+        "seriously. I am at home in enterprise databases — Oracle, SQL Server, MySQL and " +
+        "PostgreSQL — and I like owning a feature from the schema to the button someone " +
+        "actually taps.",
       ],
       factsLabel: "Quick Facts",
       facts: [
         { k: "Location",  v: "Thailand" },
-        { k: "Role",      v: "Full Stack Developer" },
+        { k: "Role",      v: "Software Engineer" },
+        { k: "Experience", v: "7 years · Bank of Ayudhya" },
         { k: "Languages", v: "Thai (Native) · English" },
         { k: "Focus",     v: "Angular · Flutter · Java" },
       ],
@@ -230,9 +233,9 @@ const CONTENT = {
 
     stats: {
       items: [
+        { value: 7, suffix: "",  label: "Years Experience" },
         { value: 5, suffix: "+", label: "Projects Built" },
-        { value: 3, suffix: "+", label: "Years Coding" },
-        { value: 4, suffix: "",  label: "Languages Used" },
+        { value: 4, suffix: "",  label: "Databases Used" },
       ],
     },
 
@@ -289,11 +292,11 @@ const CONTENT = {
       title: "Experience",
       items: [
         {
-          period: "2023 — Present",
-          role: "Developer",
-          org: "TODO Company",
-          desc: "TODO A short summary of what you do, what you own, what you use.",
-          tags: ["Flutter", "Angular"],
+          period: "2019 — Present · 7 years",
+          role: "Software Engineer",
+          org: "Bank of Ayudhya (Krungsri)",
+          desc: "Building and maintaining internal banking systems, working across both the application layer and the database.",
+          tags: ["Java", "Angular", "Oracle", "SQL Server"],
         },
       ],
     },
