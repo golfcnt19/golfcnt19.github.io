@@ -95,7 +95,7 @@ const CONTENT = {
         { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
         { group: "Database", note: "ออกแบบและเขียน query",   items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Testing",  note: "ทดสอบโหลดและเขียนสคริปต์อัตโนมัติ", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
-        { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["Git", "GitHub", "VS Code", "Android Studio"] },
+        { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["IntelliJ IDEA", "Android Studio", "VS Code", "Git", "GitHub"] },
       ],
     },
 
@@ -251,7 +251,7 @@ const CONTENT = {
         { group: "Backend",  note: "Server side",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
         { group: "Database", note: "Schema design and queries", items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Testing",  note: "Load testing and automation", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
-        { group: "Tools",    note: "Daily drivers",       items: ["Git", "GitHub", "VS Code", "Android Studio"] },
+        { group: "Tools",    note: "Daily drivers",       items: ["IntelliJ IDEA", "Android Studio", "VS Code", "Git", "GitHub"] },
       ],
     },
 
