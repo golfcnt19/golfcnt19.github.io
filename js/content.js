@@ -112,20 +112,22 @@ const CONTENT = {
       title: "โปรเจคที่เลือกมา",
       lead: "งานที่ทำแล้วได้เรียนรู้อะไรบางอย่าง",
 
-      /* ว่างไว้ก่อน — section "ผลงาน" จะถูกซ่อนอัตโนมัติทั้ง section
-         พร้อมลิงก์ในเมนู จนกว่าจะมีรายการอย่างน้อยหนึ่งอัน
-
-         เวลาจะเพิ่ม ให้ก๊อปบล็อกนี้ใส่ใน items แล้วอย่าลืมเพิ่มใน en ด้วย
-         {
-           name: "ชื่อโปรเจค",
-           kind: "Web App",        // ป้ายเล็กมุมบนของการ์ด
-           desc: "ทำอะไร แก้ปัญหาอะไร",
-           tags: ["Java", "Oracle"],
-           repo: "",               // URL ของ repo หรือเว้นว่าง
-           live: "",               // URL เว็บจริง หรือเว้นว่าง
-           highlight: false,       // true = การ์ดเด่น มีป้าย FEATURED
-         },                                                              */
-      items: [],
+      /* เพิ่มโปรเจคใหม่: ก๊อปบล็อกข้างล่างแล้วแก้ อย่าลืมเพิ่มใน en ด้วย
+         ให้จำนวนรายการเท่ากันเสมอ ไม่งั้นสลับภาษาแล้วเนื้อหาหาย */
+      items: [
+        {
+          name: "Expense Tracker",
+          kind: "Full Stack",
+          desc:
+            "ระบบบันทึกค่าใช้จ่าย — REST API หนึ่งตัว ต่อด้วย client สองแบบ " +
+            "วัดผลด้วย JMeter บนข้อมูล 200,000 แถว พบว่า index ที่ออกแบบตามคิวรีจริง " +
+            "ทำให้ throughput ต่างกัน 13.8 เท่า (2,675 เทียบกับ 194 req/s) และ p99 ลดจาก 528 เหลือ 32 ms",
+          tags: ["Kotlin", "Spring Boot", "Angular", "Flutter", "PostgreSQL", "JMeter"],
+          repo: "https://github.com/golfcnt19/expense-tracker",
+          live: "https://expense-api-kh1o.onrender.com/actuator/health",
+          highlight: true,
+        },
+      ],
     },
 
     experience: {
@@ -274,8 +276,21 @@ const CONTENT = {
       eyebrow: "Selected Work",
       title: "Projects",
       lead: "Work that taught me something.",
-      // ต้องมีจำนวนรายการเท่ากับฝั่ง th เสมอ — ตอนนี้ว่างทั้งคู่
-      items: [],
+      // ต้องมีจำนวนรายการเท่ากับฝั่ง th เสมอ
+      items: [
+        {
+          name: "Expense Tracker",
+          kind: "Full Stack",
+          desc:
+            "One REST API with two clients. Load tested with JMeter over 200,000 rows: " +
+            "indexes designed around the queries the code actually runs made throughput " +
+            "13.8× higher (2,675 vs 194 req/s) and cut p99 from 528 ms to 32 ms.",
+          tags: ["Kotlin", "Spring Boot", "Angular", "Flutter", "PostgreSQL", "JMeter"],
+          repo: "https://github.com/golfcnt19/expense-tracker",
+          live: "https://expense-api-kh1o.onrender.com/actuator/health",
+          highlight: true,
+        },
+      ],
     },
 
     experience: {
