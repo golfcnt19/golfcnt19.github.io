@@ -56,11 +56,12 @@ const CONTENT = {
       title: "เกี่ยวกับผม",
       body: [
         // TODO เขียนแทนสองย่อหน้านี้ — เพิ่มหรือลดย่อหน้าได้
-        "ผมเป็น full stack developer ทำงานได้ทั้งฝั่งเซิร์ฟเวอร์และฝั่งหน้าจอ " +
+        "ผมเป็น full stack developer ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ " +
         "เขียนแอปมือถือด้วย Flutter และ Kotlin ทำเว็บด้วย Angular กับ TypeScript " +
-        "และทำ service ฝั่งหลังบ้านด้วย Java",
+        "ทำ service ฝั่งหลังบ้านด้วย Java และทำงานกับฐานข้อมูลได้หลายตัว " +
+        "ทั้ง SQL Server, MySQL, Oracle และ PostgreSQL",
 
-        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ API จนถึงปุ่มที่ผู้ใช้กดจริง " +
+        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง " +
         "กำลังมองหาทีมที่ให้ความสำคัญกับคุณภาพของโค้ด และมีคนที่เก่งกว่าให้เรียนรู้",
       ],
       factsLabel: "ข้อมูลโดยย่อ",
@@ -89,7 +90,8 @@ const CONTENT = {
         // TODO ปรับกลุ่มและรายการให้ตรงกับที่คุณใช้จริง
         { group: "Mobile",   note: "แอปมือถือ ทั้ง cross-platform และ native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "เว็บแอป",                items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "REST API", "SQL"] },
+        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "REST API"] },
+        { group: "Database", note: "ออกแบบและเขียน query",   items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
     },
@@ -208,11 +210,12 @@ const CONTENT = {
       eyebrow: "Background",
       title: "About Me",
       body: [
-        "I am a full stack developer, comfortable from the server up to the screen. " +
+        "I am a full stack developer, comfortable from the database up to the screen. " +
         "I build mobile apps with Flutter and Kotlin, web frontends with Angular and " +
-        "TypeScript, and the services behind them with Java.",
+        "TypeScript, services with Java, and I work across SQL Server, MySQL, Oracle " +
+        "and PostgreSQL.",
 
-        "I like owning a feature end to end, from the API to the button someone actually " +
+        "I like owning a feature end to end, from the schema to the button someone actually " +
         "taps. Currently looking for a team that cares about code quality and where there " +
         "are people to learn from.",
       ],
@@ -240,7 +243,8 @@ const CONTENT = {
       groups: [
         { group: "Mobile",   note: "Cross-platform and native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "Web applications",    items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "Server side",         items: ["Java", "REST API", "SQL"] },
+        { group: "Backend",  note: "Server side",         items: ["Java", "REST API"] },
+        { group: "Database", note: "Schema design and queries", items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Tools",    note: "Daily drivers",       items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
     },
