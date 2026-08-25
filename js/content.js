@@ -67,7 +67,7 @@ const CONTENT = {
       ],
       factsLabel: "ข้อมูลโดยย่อ",
       facts: [
-        { k: "ที่อยู่",     v: "ประเทศไทย" },          // TODO จังหวัด
+        { k: "ที่อยู่",     v: "กรุงเทพมหานคร" },
         { k: "บทบาท",      v: "Software Engineer" },
         { k: "ประสบการณ์", v: "12 ปี · ธนาคารกรุงศรีอยุธยา, แสงชัยกรุ๊ป" },
         { k: "ภาษา",       v: "ไทย (เจ้าของภาษา) · อังกฤษ" },
@@ -151,9 +151,10 @@ const CONTENT = {
       title: "การศึกษา",
       items: [
         {
-          period: "TODO ปี",
-          degree: "TODO วุฒิ / สาขา",
-          place: "TODO สถาบัน",
+          // TODO ใส่ช่วงปีที่เรียน เช่น "2553 — 2557" — เว้นว่างไว้จะไม่แสดงบรรทัดนี้
+          period: "",
+          degree: "วิทยาการสารสนเทศ (Informatics)",
+          place: "มหาวิทยาลัยบูรพา · คณะวิทยาการสารสนเทศ",
         },
       ],
     },
@@ -221,7 +222,7 @@ const CONTENT = {
       ],
       factsLabel: "Quick Facts",
       facts: [
-        { k: "Location",  v: "Thailand" },
+        { k: "Location",  v: "Bangkok, Thailand" },
         { k: "Role",      v: "Software Engineer" },
         { k: "Experience", v: "12 years · Bank of Ayudhya, Sangchai Group" },
         { k: "Languages", v: "Thai (Native) · English" },
@@ -285,9 +286,9 @@ const CONTENT = {
       title: "Education",
       items: [
         {
-          period: "TODO Years",
-          degree: "TODO Degree / Field",
-          place: "TODO Institution",
+          period: "",
+          degree: "Informatics",
+          place: "Burapha University · Faculty of Informatics",
         },
       ],
     },

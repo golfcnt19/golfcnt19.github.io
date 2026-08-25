@@ -146,16 +146,21 @@
     if (!list) return;
     if (!items || !items.length) { list.innerHTML = ""; return; }
 
+    // period เว้นว่างได้ ถ้าว่างก็ไม่ต้องแสดงบรรทัดนั้น
+    var period = function (v) {
+      return v ? '<p class="tl__period">' + esc(v) + "</p>" : "";
+    };
+
     list.innerHTML = items.map(function (it) {
       if (compactFields) {
         return '<li class="tl reveal">' +
-          '<p class="tl__period">' + esc(it.period) + "</p>" +
+          period(it.period) +
           '<h3 class="tl__role">' + esc(it.degree) + "</h3>" +
           '<p class="tl__org">' + esc(it.place) + "</p>" +
         "</li>";
       }
       return '<li class="tl reveal">' +
-        '<p class="tl__period">' + esc(it.period) + "</p>" +
+        period(it.period) +
         '<h3 class="tl__role">' + esc(it.role) + "</h3>" +
         '<p class="tl__org">' + esc(it.org) + "</p>" +
         (it.desc ? '<p class="tl__desc">' + esc(it.desc) + "</p>" : "") +
