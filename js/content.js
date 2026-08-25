@@ -58,7 +58,7 @@ const CONTENT = {
         // TODO เขียนแทนสองย่อหน้านี้ — เพิ่มหรือลดย่อหน้าได้
         "ผมเป็น software engineer ประสบการณ์ 12 ปี เริ่มจากเขียน PHP ทำระบบภายในองค์กร " +
         "ที่แสงชัยกรุ๊ป 5 ปี แล้วมาต่อที่ธนาคารกรุงศรีอยุธยาอีก 7 ปี " +
-        "ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — เขียน service ฝั่งหลังบ้านด้วย Java " +
+        "ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — เขียน API ฝั่งหลังบ้านด้วย Java, Kotlin และ Spring " +
         "ทำเว็บด้วย Angular กับ TypeScript เขียนแอปมือถือด้วย Flutter และ Kotlin",
 
         "งานในระบบธนาคารสอนให้ให้ความสำคัญกับความถูกต้องของข้อมูลและความน่าเชื่อถือของระบบ " +
@@ -93,7 +93,7 @@ const CONTENT = {
         // TODO ปรับกลุ่มและรายการให้ตรงกับที่คุณใช้จริง
         { group: "Mobile",   note: "แอปมือถือ ทั้ง cross-platform และ native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "เว็บแอป",                items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
+        { group: "Backend",  note: "พัฒนา API ฝั่งเซิร์ฟเวอร์", items: ["Java", "Kotlin", "Spring", "REST API", "PHP"] },
         { group: "Database", note: "ออกแบบและเขียน query",   items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Testing",  note: "ทดสอบโหลดและเขียนสคริปต์อัตโนมัติ", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
         { group: "DevSecOps", note: "พื้นฐาน ใช้ประกอบงานพัฒนา", items: ["Jenkins", "Dynatrace", "AWS CloudShell", "CI/CD"] },
@@ -133,8 +133,8 @@ const CONTENT = {
           role: "Software Engineer",
           org: "ธนาคารกรุงศรีอยุธยา (Bank of Ayudhya)",
           // TODO เขียนแทนบรรทัดนี้ — ดูแลระบบอะไร ทีมกี่คน ผลลัพธ์ที่วัดได้
-          desc: "พัฒนาและดูแลระบบของธนาคาร ครอบคลุมทั้งงานฝั่งเว็บ ฐานข้อมูล " +
-                "และแอปมือถือด้วย Flutter และ Kotlin " +
+          desc: "พัฒนาและดูแลระบบของธนาคาร ทำ API ฝั่งหลังบ้านด้วย Java, Kotlin และ Spring " +
+                "ควบคู่กับงานฝั่งเว็บ ฐานข้อมูล และแอปมือถือด้วย Flutter และ Kotlin " +
                 "รวมถึงทำ load test ด้วย JMeter และเขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium",
           tags: ["Java", "Spring", "Angular", "Flutter", "Kotlin", "Oracle", "JMeter", "Appium"],
         },
@@ -217,8 +217,8 @@ const CONTENT = {
       body: [
         "I am a software engineer with 12 years of experience — five years writing PHP " +
         "business systems at Sangchai Group, then seven at Bank of Ayudhya (Krungsri). " +
-        "I am comfortable from the database up to the screen: services in Java, web " +
-        "frontends in Angular and TypeScript, mobile apps in Flutter and Kotlin.",
+        "I am comfortable from the database up to the screen: backend APIs in Java, Kotlin " +
+        "and Spring, web frontends in Angular and TypeScript, mobile apps in Flutter and Kotlin.",
 
         "Working on banking systems taught me to take data correctness and reliability " +
         "seriously. Beyond writing code I run load tests with JMeter, read the results in " +
@@ -250,7 +250,7 @@ const CONTENT = {
       groups: [
         { group: "Mobile",   note: "Cross-platform and native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "Web applications",    items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "Server side",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
+        { group: "Backend",  note: "Server-side API development", items: ["Java", "Kotlin", "Spring", "REST API", "PHP"] },
         { group: "Database", note: "Schema design and queries", items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Testing",  note: "Load testing and automation", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
         { group: "DevSecOps", note: "Working familiarity, supporting my dev work", items: ["Jenkins", "Dynatrace", "AWS CloudShell", "CI/CD"] },
@@ -275,7 +275,7 @@ const CONTENT = {
           period: "2019 — Present · 7 years",
           role: "Software Engineer",
           org: "Bank of Ayudhya (Krungsri)",
-          desc: "Building and maintaining banking systems across web, database and mobile — including Flutter and Kotlin apps — plus load testing with JMeter and automated test scripts with Appium.",
+          desc: "Building and maintaining banking systems — backend APIs in Java, Kotlin and Spring alongside web, database and mobile work in Flutter and Kotlin, plus load testing with JMeter and automated test scripts with Appium.",
           tags: ["Java", "Spring", "Angular", "Flutter", "Kotlin", "Oracle", "JMeter", "Appium"],
         },
         {
