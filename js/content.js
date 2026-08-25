@@ -42,10 +42,10 @@ const CONTENT = {
 
     hero: {
       status: "เปิดรับโอกาสใหม่",              // TODO หรือ "ไม่ว่างรับงาน"
-      role: "MOBILE & WEB DEVELOPER",           // TODO ตำแหน่งของคุณ
+      role: "FULL STACK DEVELOPER",
       tagline:
-        "พัฒนาแอปมือถือด้วย Flutter และเว็บแอปด้วย Angular " +
-        "สนใจงานที่ได้สร้างของที่คนใช้จริง",   // TODO หนึ่งถึงสองประโยค
+        "ทำงานได้ตั้งแต่ฝั่งเซิร์ฟเวอร์ถึงหน้าจอ — Angular, Flutter, Java และ Kotlin " +
+        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ต้นจนจบ",
       ctaPrimary: "ดูผลงาน",
       ctaSecondary: "ติดต่อผม",
       scrollHint: "เลื่อนลง",
@@ -56,18 +56,19 @@ const CONTENT = {
       title: "เกี่ยวกับผม",
       body: [
         // TODO เขียนแทนสองย่อหน้านี้ — เพิ่มหรือลดย่อหน้าได้
-        "ผมเป็นนักพัฒนาที่สนใจงานฝั่งมือถือและเว็บ เริ่มจากการทำโปรเจคด้วย Flutter " +
-        "และต่อยอดมาที่ Angular กับ TypeScript ชอบงานที่ได้เห็นผลลัพธ์เป็นหน้าจอที่คนกดใช้ได้จริง",
+        "ผมเป็น full stack developer ทำงานได้ทั้งฝั่งเซิร์ฟเวอร์และฝั่งหน้าจอ " +
+        "เขียนแอปมือถือด้วย Flutter และ Kotlin ทำเว็บด้วย Angular กับ TypeScript " +
+        "และทำ service ฝั่งหลังบ้านด้วย Java",
 
-        "กำลังมองหาโอกาสที่ได้ทำงานกับทีมที่ให้ความสำคัญกับคุณภาพของโค้ด " +
-        "และได้เรียนรู้จากคนที่เก่งกว่า",
+        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ API จนถึงปุ่มที่ผู้ใช้กดจริง " +
+        "กำลังมองหาทีมที่ให้ความสำคัญกับคุณภาพของโค้ด และมีคนที่เก่งกว่าให้เรียนรู้",
       ],
       factsLabel: "ข้อมูลโดยย่อ",
       facts: [
         { k: "ที่อยู่",     v: "ประเทศไทย" },          // TODO จังหวัด
-        { k: "บทบาท",      v: "Developer" },            // TODO
+        { k: "บทบาท",      v: "Full Stack Developer" },
         { k: "ภาษา",       v: "ไทย (เจ้าของภาษา) · อังกฤษ" },
-        { k: "สนใจ",       v: "Mobile · Frontend" },    // TODO
+        { k: "ถนัด",       v: "Angular · Flutter · Java" },
       ],
     },
 
@@ -86,10 +87,10 @@ const CONTENT = {
       lead: "เทคโนโลยีที่ใช้งานได้จริงและใช้อยู่เป็นประจำ",
       groups: [
         // TODO ปรับกลุ่มและรายการให้ตรงกับที่คุณใช้จริง
-        { group: "Mobile",   note: "แอปมือถือข้ามแพลตฟอร์ม", items: ["Flutter", "Dart"] },
+        { group: "Mobile",   note: "แอปมือถือ ทั้ง cross-platform และ native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "เว็บแอป",                items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Node.js", "REST API"] },
-        { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["Git", "GitHub", "VS Code"] },
+        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "REST API", "SQL"] },
+        { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
     },
 
@@ -194,10 +195,10 @@ const CONTENT = {
 
     hero: {
       status: "Open to new opportunities",
-      role: "MOBILE & WEB DEVELOPER",
+      role: "FULL STACK DEVELOPER",
       tagline:
-        "Building mobile apps with Flutter and web apps with Angular. " +
-        "Drawn to work that ships to real users.",
+        "Working from the server through to the screen — Angular, Flutter, Java and Kotlin. " +
+        "Drawn to owning a feature end to end.",
       ctaPrimary: "View Work",
       ctaSecondary: "Get In Touch",
       scrollHint: "Scroll",
@@ -207,19 +208,20 @@ const CONTENT = {
       eyebrow: "Background",
       title: "About Me",
       body: [
-        "I am a developer focused on mobile and web. I started with Flutter projects " +
-        "and moved into Angular and TypeScript. I like work where the result is a screen " +
-        "someone actually taps.",
+        "I am a full stack developer, comfortable from the server up to the screen. " +
+        "I build mobile apps with Flutter and Kotlin, web frontends with Angular and " +
+        "TypeScript, and the services behind them with Java.",
 
-        "Currently looking for a team that cares about code quality and where there are " +
-        "people to learn from.",
+        "I like owning a feature end to end, from the API to the button someone actually " +
+        "taps. Currently looking for a team that cares about code quality and where there " +
+        "are people to learn from.",
       ],
       factsLabel: "Quick Facts",
       facts: [
         { k: "Location",  v: "Thailand" },
-        { k: "Role",      v: "Developer" },
+        { k: "Role",      v: "Full Stack Developer" },
         { k: "Languages", v: "Thai (Native) · English" },
-        { k: "Focus",     v: "Mobile · Frontend" },
+        { k: "Focus",     v: "Angular · Flutter · Java" },
       ],
     },
 
@@ -236,10 +238,10 @@ const CONTENT = {
       title: "Skills & Tools",
       lead: "Technologies I work with regularly.",
       groups: [
-        { group: "Mobile",   note: "Cross-platform apps", items: ["Flutter", "Dart"] },
+        { group: "Mobile",   note: "Cross-platform and native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "Web applications",    items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "Server side",         items: ["Node.js", "REST API"] },
-        { group: "Tools",    note: "Daily drivers",       items: ["Git", "GitHub", "VS Code"] },
+        { group: "Backend",  note: "Server side",         items: ["Java", "REST API", "SQL"] },
+        { group: "Tools",    note: "Daily drivers",       items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
     },
 
