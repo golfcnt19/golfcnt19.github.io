@@ -44,8 +44,8 @@ const CONTENT = {
       status: "เปิดรับโอกาสใหม่",              // TODO หรือ "ไม่ว่างรับงาน"
       role: "SOFTWARE ENGINEER · FULL STACK",
       tagline:
-        "7 ปีในระบบธนาคาร ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — " +
-        "Java, Angular, Flutter และ Kotlin",
+        "12 ปีในสายพัฒนาซอฟต์แวร์ ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — " +
+        "Java, Angular, Flutter, Kotlin และ PHP",
       ctaPrimary: "ดูผลงาน",
       ctaSecondary: "ติดต่อผม",
       scrollHint: "เลื่อนลง",
@@ -56,7 +56,8 @@ const CONTENT = {
       title: "เกี่ยวกับผม",
       body: [
         // TODO เขียนแทนสองย่อหน้านี้ — เพิ่มหรือลดย่อหน้าได้
-        "ผมเป็น software engineer ประสบการณ์ 7 ปีที่ธนาคารกรุงศรีอยุธยา " +
+        "ผมเป็น software engineer ประสบการณ์ 12 ปี เริ่มจากเขียน PHP ทำระบบภายในองค์กร " +
+        "ที่แสงชัยกรุ๊ป 5 ปี แล้วมาต่อที่ธนาคารกรุงศรีอยุธยาอีก 7 ปี " +
         "ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — เขียน service ฝั่งหลังบ้านด้วย Java " +
         "ทำเว็บด้วย Angular กับ TypeScript เขียนแอปมือถือด้วย Flutter และ Kotlin",
 
@@ -68,7 +69,7 @@ const CONTENT = {
       facts: [
         { k: "ที่อยู่",     v: "ประเทศไทย" },          // TODO จังหวัด
         { k: "บทบาท",      v: "Software Engineer" },
-        { k: "ประสบการณ์", v: "7 ปี · ธนาคารกรุงศรีอยุธยา" },
+        { k: "ประสบการณ์", v: "12 ปี · ธนาคารกรุงศรีอยุธยา, แสงชัยกรุ๊ป" },
         { k: "ภาษา",       v: "ไทย (เจ้าของภาษา) · อังกฤษ" },
         { k: "ถนัด",       v: "Angular · Flutter · Java" },
       ],
@@ -77,8 +78,8 @@ const CONTENT = {
     stats: {
       // value เป็นตัวเลขล้วน ระบบจะนับขึ้นให้เอง
       items: [
-        { value: 7,  suffix: "",  label: "ปีประสบการณ์" },
-        { value: 5,  suffix: "+", label: "โปรเจคที่ทำ" },       // TODO ใส่จำนวนจริง
+        { value: 12, suffix: "",  label: "ปีประสบการณ์" },
+        { value: 2,  suffix: "",  label: "องค์กรที่ร่วมงาน" },
         { value: 4,  suffix: "",  label: "ฐานข้อมูลที่ใช้ได้" },
       ],
     },
@@ -91,7 +92,7 @@ const CONTENT = {
         // TODO ปรับกลุ่มและรายการให้ตรงกับที่คุณใช้จริง
         { group: "Mobile",   note: "แอปมือถือ ทั้ง cross-platform และ native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "เว็บแอป",                items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "REST API"] },
+        { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "PHP", "REST API"] },
         { group: "Database", note: "ออกแบบและเขียน query",   items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
@@ -136,6 +137,7 @@ const CONTENT = {
     experience: {
       eyebrow: "เส้นทาง",
       title: "ประสบการณ์",
+      // เรียงจากงานล่าสุดลงไปหางานแรก
       items: [
         {
           // TODO ยืนยันปีเริ่ม — ผมคำนวณ 2562 จาก "7 ปี" นับถอยหลังจากปีนี้
@@ -145,6 +147,16 @@ const CONTENT = {
           // TODO เขียนแทนบรรทัดนี้ — ดูแลระบบอะไร ทีมกี่คน ผลลัพธ์ที่วัดได้
           desc: "พัฒนาและดูแลระบบภายในของธนาคาร ทำงานทั้งฝั่งแอปพลิเคชันและฐานข้อมูล",
           tags: ["Java", "Angular", "Oracle", "SQL Server"],
+        },
+        {
+          // TODO ยืนยันช่วงปี — คำนวณจาก 5 ปีก่อนเข้าธนาคาร
+          period: "2557 — 2562 · 5 ปี",
+          role: "Developer",
+          org: "บริษัท แสงชัยกรุ๊ป",
+          // TODO เขียนแทนบรรทัดนี้ — ทำระบบอะไร ใช้กับกี่หน่วยงาน
+          desc: "งานแรก พัฒนาระบบภายในองค์กรด้วย PHP ให้ธุรกิจจัดจำหน่ายระบบทำความเย็น " +
+                "ปรับอากาศ และไฟฟ้า",
+          tags: ["PHP", "MySQL", "JavaScript"],
         },
       ],
     },
@@ -201,8 +213,8 @@ const CONTENT = {
       status: "Open to new opportunities",
       role: "SOFTWARE ENGINEER · FULL STACK",
       tagline:
-        "Seven years in banking systems, working from the database through to the screen — " +
-        "Java, Angular, Flutter and Kotlin.",
+        "Twelve years building software, working from the database through to the screen — " +
+        "Java, Angular, Flutter, Kotlin and PHP.",
       ctaPrimary: "View Work",
       ctaSecondary: "Get In Touch",
       scrollHint: "Scroll",
@@ -212,9 +224,10 @@ const CONTENT = {
       eyebrow: "Background",
       title: "About Me",
       body: [
-        "I am a software engineer with 7 years at Bank of Ayudhya (Krungsri), comfortable " +
-        "from the database up to the screen — services in Java, web frontends in Angular " +
-        "and TypeScript, mobile apps in Flutter and Kotlin.",
+        "I am a software engineer with 12 years of experience — five years writing PHP " +
+        "business systems at Sangchai Group, then seven at Bank of Ayudhya (Krungsri). " +
+        "I am comfortable from the database up to the screen: services in Java, web " +
+        "frontends in Angular and TypeScript, mobile apps in Flutter and Kotlin.",
 
         "Working on banking systems taught me to take data correctness and reliability " +
         "seriously. I am at home in enterprise databases — Oracle, SQL Server, MySQL and " +
@@ -225,7 +238,7 @@ const CONTENT = {
       facts: [
         { k: "Location",  v: "Thailand" },
         { k: "Role",      v: "Software Engineer" },
-        { k: "Experience", v: "7 years · Bank of Ayudhya" },
+        { k: "Experience", v: "12 years · Bank of Ayudhya, Sangchai Group" },
         { k: "Languages", v: "Thai (Native) · English" },
         { k: "Focus",     v: "Angular · Flutter · Java" },
       ],
@@ -233,9 +246,9 @@ const CONTENT = {
 
     stats: {
       items: [
-        { value: 7, suffix: "",  label: "Years Experience" },
-        { value: 5, suffix: "+", label: "Projects Built" },
-        { value: 4, suffix: "",  label: "Databases Used" },
+        { value: 12, suffix: "", label: "Years Experience" },
+        { value: 2,  suffix: "", label: "Companies" },
+        { value: 4,  suffix: "", label: "Databases Used" },
       ],
     },
 
@@ -246,7 +259,7 @@ const CONTENT = {
       groups: [
         { group: "Mobile",   note: "Cross-platform and native", items: ["Flutter", "Dart", "Kotlin", "Android"] },
         { group: "Frontend", note: "Web applications",    items: ["Angular", "TypeScript", "HTML", "CSS"] },
-        { group: "Backend",  note: "Server side",         items: ["Java", "REST API"] },
+        { group: "Backend",  note: "Server side",         items: ["Java", "PHP", "REST API"] },
         { group: "Database", note: "Schema design and queries", items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Tools",    note: "Daily drivers",       items: ["Git", "GitHub", "VS Code", "Android Studio"] },
       ],
@@ -290,6 +303,7 @@ const CONTENT = {
     experience: {
       eyebrow: "Track Record",
       title: "Experience",
+      // Most recent first
       items: [
         {
           period: "2019 — Present · 7 years",
@@ -297,6 +311,13 @@ const CONTENT = {
           org: "Bank of Ayudhya (Krungsri)",
           desc: "Building and maintaining internal banking systems, working across both the application layer and the database.",
           tags: ["Java", "Angular", "Oracle", "SQL Server"],
+        },
+        {
+          period: "2014 — 2019 · 5 years",
+          role: "Developer",
+          org: "Sangchai Group",
+          desc: "First role. Built internal business systems in PHP for a distributor of refrigeration, air-conditioning and electrical systems.",
+          tags: ["PHP", "MySQL", "JavaScript"],
         },
       ],
     },
