@@ -62,8 +62,9 @@ const CONTENT = {
         "ทำเว็บด้วย Angular กับ TypeScript เขียนแอปมือถือด้วย Flutter และ Kotlin",
 
         "งานในระบบธนาคารสอนให้ให้ความสำคัญกับความถูกต้องของข้อมูลและความน่าเชื่อถือของระบบ " +
-        "นอกจากเขียนโค้ดแล้วยังทำ load test ด้วย JMeter และเขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium " +
-        "เพื่อให้มั่นใจว่าระบบรับโหลดจริงไหว ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง",
+        "นอกจากเขียนโค้ดแล้วยังทำ load test ด้วย JMeter ดูผลผ่าน Dynatrace เพื่อหาคอขวด " +
+        "และเขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium " +
+        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง",
       ],
       factsLabel: "ข้อมูลโดยย่อ",
       facts: [
@@ -95,6 +96,7 @@ const CONTENT = {
         { group: "Backend",  note: "ฝั่งเซิร์ฟเวอร์",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
         { group: "Database", note: "ออกแบบและเขียน query",   items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Testing",  note: "ทดสอบโหลดและเขียนสคริปต์อัตโนมัติ", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
+        { group: "DevSecOps", note: "พื้นฐาน ใช้ประกอบงานพัฒนา", items: ["Jenkins", "Dynatrace", "AWS CloudShell", "CI/CD"] },
         { group: "Tools",    note: "เครื่องมือประจำวัน",      items: ["IntelliJ IDEA", "Android Studio", "VS Code", "Git", "GitHub"] },
       ],
     },
@@ -219,8 +221,8 @@ const CONTENT = {
         "frontends in Angular and TypeScript, mobile apps in Flutter and Kotlin.",
 
         "Working on banking systems taught me to take data correctness and reliability " +
-        "seriously. Beyond writing code I run load tests with JMeter and write automated " +
-        "test scripts with Appium, so I know a system holds up before it ships. I like " +
+        "seriously. Beyond writing code I run load tests with JMeter, read the results in " +
+        "Dynatrace to find bottlenecks, and write automated test scripts with Appium. I like " +
         "owning a feature from the schema to the button someone actually taps.",
       ],
       factsLabel: "Quick Facts",
@@ -251,6 +253,7 @@ const CONTENT = {
         { group: "Backend",  note: "Server side",         items: ["Java", "Spring", "Kotlin", "PHP", "REST API"] },
         { group: "Database", note: "Schema design and queries", items: ["SQL Server", "MySQL", "Oracle", "PostgreSQL"] },
         { group: "Testing",  note: "Load testing and automation", items: ["JMeter", "Appium", "Load Testing", "Test Automation"] },
+        { group: "DevSecOps", note: "Working familiarity, supporting my dev work", items: ["Jenkins", "Dynatrace", "AWS CloudShell", "CI/CD"] },
         { group: "Tools",    note: "Daily drivers",       items: ["IntelliJ IDEA", "Android Studio", "VS Code", "Git", "GitHub"] },
       ],
     },
