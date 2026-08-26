@@ -19,6 +19,13 @@ const CONTENT = {
     handle: "golfcnt19",
     email: "chanathipjaidee@gmail.com",
     github: "https://github.com/golfcnt19",
+    website: "https://golfcnt19.github.io",
+
+    // ใช้เฉพาะหน้าเรซูเม่ (resume.html) — ช่องไหนเว้นว่างไว้ บรรทัดนั้นจะไม่แสดง
+    // รูป ID ที่คีย์พื้นหลังฟ้าออกเป็นขาวและย่อเหลือ 720px แล้ว (87 KB)
+    // ต้นฉบับ 1200x1800 ไม่ได้อยู่ใน repo เพราะหนัก 930 KB — เก็บไว้นอก repo
+    photo: "image/chanathip-white.jpg",  // ลบทิ้งหรือเว้นว่าง = ไม่มีรูปบนเรซูเม่
+    phone: "097-298-7957",
     // ลิงก์เพิ่มเติม — ลบบรรทัดที่ไม่มีได้เลย
     links: [
       { label: "GitHub",   url: "https://github.com/golfcnt19", icon: "github" },
@@ -55,16 +62,17 @@ const CONTENT = {
       eyebrow: "แนะนำตัว",
       title: "เกี่ยวกับผม",
       body: [
-        // TODO เขียนแทนสองย่อหน้านี้ — เพิ่มหรือลดย่อหน้าได้
-        "ผมเป็น software engineer ประสบการณ์ 12 ปี เริ่มจากเขียน PHP ทำระบบภายในองค์กร " +
-        "ที่แสงชัยกรุ๊ป 5 ปี แล้วมาต่อที่ธนาคารกรุงศรีอยุธยาอีก 7 ปี " +
-        "ทำงานได้ตั้งแต่ฐานข้อมูลจนถึงหน้าจอ — เขียน API ฝั่งหลังบ้านด้วย Java, Kotlin และ Spring " +
-        "ทำเว็บด้วย Angular กับ TypeScript เขียนแอปมือถือด้วย Flutter และ Kotlin",
+        "Full stack software engineer ประสบการณ์ 12 ปี ทำงานได้ทั้งสายตั้งแต่ schema " +
+        "ของฐานข้อมูลจนถึงปุ่มที่ผู้ใช้กดจริง — เขียน service ด้วย Java และ Kotlin บน Spring " +
+        "ทำเว็บด้วย Angular และ TypeScript ทำแอปมือถือด้วย Flutter และ Kotlin " +
+        "ห้าปีแรกเขียน PHP ทำระบบธุรกิจที่แสงชัยกรุ๊ป เจ็ดปีหลังอยู่ที่ธนาคารกรุงศรีอยุธยา",
 
-        "งานในระบบธนาคารสอนให้ให้ความสำคัญกับความถูกต้องของข้อมูลและความน่าเชื่อถือของระบบ " +
-        "นอกจากเขียนโค้ดแล้วยังทำ load test ด้วย JMeter ดูผลผ่าน Dynatrace เพื่อหาคอขวด " +
-        "และเขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium " +
-        "ชอบงานที่ได้ดูแลฟีเจอร์ตั้งแต่ schema จนถึงปุ่มที่ผู้ใช้กดจริง",
+        "งานธนาคารตั้งมาตรฐานเรื่องความถูกต้องของข้อมูลและความต่อเนื่องของระบบให้ผม " +
+        "และสอนว่าการส่งงานขึ้นระบบไม่ใช่เส้นชัย — ผมทำ load test ด้วย JMeter " +
+        "ไล่หาคอขวดจาก trace ใน Dynatrace และเขียนสคริปต์ regression อัตโนมัติด้วย Appium " +
+        "ในโปรเจคของตัวเองผมวัดออกมาแล้วว่าวินัยแบบนี้มีค่าแค่ไหน — index ที่ออกแบบ " +
+        "ตามคิวรีที่โค้ดเรียกจริง ดัน throughput จาก 194 เป็น 2,675 req/s " +
+        "และลด p99 จาก 528 ms เหลือ 32 ms",
       ],
       factsLabel: "ข้อมูลโดยย่อ",
       facts: [
@@ -144,6 +152,14 @@ const CONTENT = {
           desc: "พัฒนาและดูแลระบบของธนาคาร ทำ API ฝั่งหลังบ้านด้วย Java, Kotlin และ Spring " +
                 "ควบคู่กับงานฝั่งเว็บ ฐานข้อมูล และแอปมือถือด้วย Flutter และ Kotlin " +
                 "รวมถึงทำ load test ด้วย JMeter และเขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium",
+          // points ใช้เฉพาะบนเรซูเม่ (แทน desc) เพราะหัวข้อย่อยอ่านง่ายกว่าบนกระดาษ
+          points: [
+            "พัฒนาและดูแล API ฝั่งหลังบ้านด้วย Java, Kotlin และ Spring บนฐานข้อมูล Oracle",
+            "ทำงานข้ามฝั่งในฟีเจอร์เดียวกัน — เว็บด้วย Angular แอปมือถือด้วย Flutter และ Kotlin",
+            "ทำ load test ด้วย JMeter แล้วไล่หาคอขวดจาก trace ใน Dynatrace",
+            "เขียนสคริปต์ทดสอบอัตโนมัติด้วย Appium ลดงาน regression ที่ต้องทำมือ",
+            "ทำงานแบบ Agile ตั้งแต่เก็บ requirement จนส่งมอบ",
+          ],
           tags: ["Java", "Spring", "Angular", "Flutter", "Kotlin", "Oracle", "JMeter", "Appium"],
         },
         {
@@ -154,6 +170,11 @@ const CONTENT = {
           // TODO เขียนแทนบรรทัดนี้ — ทำระบบอะไร ใช้กับกี่หน่วยงาน
           desc: "งานแรก พัฒนาระบบภายในองค์กรด้วย PHP ให้ธุรกิจจัดจำหน่ายระบบทำความเย็น " +
                 "ปรับอากาศ และไฟฟ้า",
+          points: [
+            "งานแรก พัฒนาระบบภายในองค์กรด้วย PHP ให้ธุรกิจจัดจำหน่าย " +
+            "ระบบทำความเย็น ปรับอากาศ และไฟฟ้า",
+            "ดูแลฟีเจอร์ครบวงจร ตั้งแต่ schema บน MySQL จนถึงหน้าจอที่ผู้ใช้ใช้งาน",
+          ],
           tags: ["PHP", "MySQL", "JavaScript"],
         },
       ],
@@ -186,9 +207,42 @@ const CONTENT = {
       backToTop: "กลับขึ้นบน",
     },
 
+    /* หน้าเรซูเม่ resume.html — หัวข้อและข้อความเฉพาะของหน้านั้น
+       เนื้อหาจริง (ประวัติ ทักษะ การศึกษา ผลงาน) ใช้ร่วมกับเว็บ ไม่ต้องเขียนซ้ำ */
+    resume: {
+      docTitle: "เรซูเม่",
+      contact: "ติดต่อ",
+      education: "การศึกษา",
+      skills: "ทักษะ",
+      languages: "ภาษา",
+      profile: "โปรไฟล์",
+      experience: "ประสบการณ์ทำงาน",
+      how: "วิธีทำงาน",
+      /* หัวข้อปิดท้ายคอลัมน์ขวาของเรซูเม่ ต้องยาวเท่ากับฝั่ง en
+         เว้น array ว่าง = ซ่อนหัวข้อนี้ทั้งหัวข้อ */
+      howPoints: [
+        "Agile — เก็บ requirement กับทีมผ่าน Jira, Miro, Figma แล้วส่งมอบเป็นรอบ",
+        "วัดก่อนเดา — load test ด้วย JMeter อ่าน trace ใน Dynatrace แล้วค่อยแก้",
+        "ใช้คอนเทนเนอร์และ CI/CD ประกอบงานพัฒนา — Podman, Kubernetes, Jenkins",
+        "ใช้ AI เป็นเครื่องมือประจำวัน — Claude, GitHub Copilot, Codex",
+      ],
+      download: "ดาวน์โหลด PDF",
+      downloadHint: "เปิดหน้าต่างพิมพ์ แล้วเลือกปลายทางเป็น Save as PDF",
+      backToSite: "กลับหน้าเว็บ",
+      photoAlt: "รูปถ่ายชนาธิป ใจดี",
+      location: "กรุงเทพมหานคร",
+      langList: [
+        "ไทย — เจ้าของภาษา",
+        "อังกฤษ — ใช้งานได้",
+      ],
+    },
+
     ui: {
       langSwitch: "EN",
       langSwitchTitle: "Switch to English",
+      resume: "เรซูเม่",
+      resumeCta: "ดาวน์โหลดเรซูเม่ (PDF)",
+      resumeTitle: "เปิดหน้าเรซูเม่ ที่นั่นมีปุ่มดาวน์โหลด PDF",
       menu: "เมนู",
       viewRepo: "ดูโค้ด",
       viewLive: "เปิดเว็บ",
@@ -223,15 +277,18 @@ const CONTENT = {
       eyebrow: "Background",
       title: "About Me",
       body: [
-        "I am a software engineer with 12 years of experience — five years writing PHP " +
-        "business systems at Sangchai Group, then seven at Bank of Ayudhya (Krungsri). " +
-        "I am comfortable from the database up to the screen: backend APIs in Java, Kotlin " +
-        "and Spring, web frontends in Angular and TypeScript, mobile apps in Flutter and Kotlin.",
+        "Full stack software engineer with 12 years across enterprise and banking systems. " +
+        "I work the whole stack — Java and Kotlin services on Spring, Angular front ends, " +
+        "Flutter and Kotlin on mobile, and the SQL schema underneath all of it. The first " +
+        "five years were PHP business systems at Sangchai Group; the last seven have been " +
+        "at Bank of Ayudhya (Krungsri).",
 
-        "Working on banking systems taught me to take data correctness and reliability " +
-        "seriously. Beyond writing code I run load tests with JMeter, read the results in " +
-        "Dynatrace to find bottlenecks, and write automated test scripts with Appium. I like " +
-        "owning a feature from the schema to the button someone actually taps.",
+        "Banking work set my bar for correctness and uptime, and taught me that shipping is " +
+        "not the finish line. I load test with JMeter, read traces in Dynatrace to find the " +
+        "real bottleneck, and keep the regression pass automated with Appium. On my own " +
+        "project I measured what that discipline is worth: indexes designed around the " +
+        "queries the code actually runs took throughput from 194 to 2,675 req/s and cut " +
+        "p99 latency from 528 ms to 32 ms.",
       ],
       factsLabel: "Quick Facts",
       facts: [
@@ -303,6 +360,14 @@ const CONTENT = {
           role: "Software Engineer",
           org: "Bank of Ayudhya (Krungsri)",
           desc: "Building and maintaining banking systems — backend APIs in Java, Kotlin and Spring alongside web, database and mobile work in Flutter and Kotlin, plus load testing with JMeter and automated test scripts with Appium.",
+          // points is résumé-only (it replaces desc there) — bullets read better on paper
+          points: [
+            "Build and maintain backend APIs in Java, Kotlin and Spring over Oracle.",
+            "Work across the stack within the same feature — Angular on the web, Flutter and Kotlin on mobile.",
+            "Run load tests with JMeter and read traces in Dynatrace to find the bottleneck.",
+            "Automate regression testing with Appium, cutting the manual pass.",
+            "Work in Agile teams from requirement gathering through delivery.",
+          ],
           tags: ["Java", "Spring", "Angular", "Flutter", "Kotlin", "Oracle", "JMeter", "Appium"],
         },
         {
@@ -310,6 +375,10 @@ const CONTENT = {
           role: "Developer",
           org: "Sangchai Group",
           desc: "First role. Built internal business systems in PHP for a distributor of refrigeration, air-conditioning and electrical systems.",
+          points: [
+            "First role. Built internal business systems in PHP for a distributor of refrigeration, air-conditioning and electrical products.",
+            "Owned features end to end, from the MySQL schema to the screen people used.",
+          ],
           tags: ["PHP", "MySQL", "JavaScript"],
         },
       ],
@@ -341,8 +410,39 @@ const CONTENT = {
       backToTop: "Back to top",
     },
 
+    // ต้องมีคีย์ตรงกับ th.resume ทุกตัว และ array ยาวเท่ากัน
+    resume: {
+      docTitle: "Résumé",
+      contact: "Contact",
+      education: "Education",
+      skills: "Skills",
+      languages: "Languages",
+      profile: "Profile",
+      experience: "Work Experience",
+      how: "How I Work",
+      // ต้องยาวเท่ากับฝั่ง th
+      howPoints: [
+        "Agile — requirements in Jira, Miro and Figma, delivered in iterations.",
+        "Measure before guessing: JMeter for load, Dynatrace for traces, then fix.",
+        "Containers and CI/CD alongside dev work — Podman, Kubernetes, Jenkins.",
+        "AI as a daily tool — Claude, GitHub Copilot and Codex.",
+      ],
+      download: "Download PDF",
+      downloadHint: "Opens the print dialog — choose Save as PDF as the destination",
+      backToSite: "Back to site",
+      photoAlt: "Photo of Chanathip Jaidee",
+      location: "Bangkok, Thailand",
+      langList: [
+        "Thai — Native",
+        "English — Working proficiency",
+      ],
+    },
+
     ui: {
       langSwitch: "TH",
+      resume: "Résumé",
+      resumeCta: "Download Résumé (PDF)",
+      resumeTitle: "Opens the résumé page, which has a PDF download button",
       langSwitchTitle: "เปลี่ยนเป็นภาษาไทย",
       menu: "Menu",
       viewRepo: "Code",

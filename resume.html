@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chanathip Jaidee — Résumé</title>
+<meta name="description" content="Résumé of Chanathip Jaidee (golfcnt19) — full stack software engineer, 12 years across Bank of Ayudhya and Sangchai Group.">
+<meta name="author" content="Chanathip Jaidee">
+<meta name="theme-color" content="#1f3540">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://golfcnt19.github.io/resume.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23070b0d'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%234fd1c5' text-anchor='middle'>CJ</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/resume.css">
+</head>
+
+<body>
+
+<!-- ══ TOOLBAR — หน้าจอเท่านั้น ไม่ติดไปกับกระดาษ ═══════════════════════ -->
+<div class="bar" id="bar">
+  <a class="bar__back" href="index.html" id="backLink">&#8592; <span data-i18n="resume.backToSite">Back to site</span></a>
+  <div class="bar__actions">
+    <button class="bar__btn" id="langBtn" type="button" data-i18n="ui.langSwitch">TH</button>
+    <button class="bar__btn bar__btn--solid" id="dlBtn" type="button" data-i18n="resume.download" data-i18n-title="resume.downloadHint">Download PDF</button>
+  </div>
+</div>
+
+<!-- ══ กระดาษ A4 ═══════════════════════════════════════════════════════ -->
+<article class="sheet" id="sheet">
+
+  <!-- แถบสีของคอลัมน์ซ้าย แยกออกมาเป็น element ของตัวเองเพราะตอนพิมพ์
+       มันจะกลายเป็น position:fixed เพื่อให้สีลากต่อไปทุกหน้ากระดาษ -->
+  <div class="rail-bg" aria-hidden="true"></div>
+
+  <aside class="rail">
+    <div class="photo">
+      <img id="photo" src="" alt="">
+    </div>
+
+    <section class="rail__sec" id="contactSec">
+      <h2 class="rail__h" data-i18n="resume.contact">Contact</h2>
+      <ul class="cx" id="contactList"></ul>
+    </section>
+
+    <section class="rail__sec" id="eduSec">
+      <h2 class="rail__h" data-i18n="resume.education">Education</h2>
+      <div id="eduList"></div>
+    </section>
+
+    <section class="rail__sec" id="skillSec">
+      <h2 class="rail__h" data-i18n="resume.skills">Skills</h2>
+      <div id="skillList"></div>
+    </section>
+
+    <section class="rail__sec" id="langSec">
+      <h2 class="rail__h" data-i18n="resume.languages">Languages</h2>
+      <ul class="bul" id="langList"></ul>
+    </section>
+  </aside>
+
+  <div class="body">
+    <header class="head">
+      <h1 class="head__name" id="name"></h1>
+      <p class="head__role" id="role"></p>
+      <span class="head__rule" aria-hidden="true"></span>
+    </header>
+
+    <section class="sec" id="profileSec">
+      <h2 class="sec__h" data-i18n="resume.profile">Profile</h2>
+      <div id="profileBody"></div>
+    </section>
+
+    <section class="sec" id="expSec">
+      <h2 class="sec__h" data-i18n="resume.experience">Work Experience</h2>
+      <ol class="jobs" id="expList"></ol>
+    </section>
+
+    <section class="sec" id="howSec">
+      <h2 class="sec__h" data-i18n="resume.how">How I Work</h2>
+      <ul class="how" id="howList"></ul>
+    </section>
+  </div>
+</article>
+
+<noscript>
+  <p class="noscript">
+    <strong>JavaScript is disabled.</strong> This résumé is rendered from
+    <code>js/content.js</code>, so it needs JavaScript. Reach me at
+    <a href="mailto:chanathipjaidee@gmail.com">chanathipjaidee@gmail.com</a>.
+  </p>
+</noscript>
+
+<script src="js/content.js"></script>
+<script src="js/resume.js"></script>
+</body>
+</html>

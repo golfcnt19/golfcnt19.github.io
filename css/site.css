@@ -162,7 +162,7 @@ html.js-anim .reveal.is-in { opacity: 1; transform: none; }
 
 .nav__actions { display: flex; align-items: center; gap: 10px; }
 
-.lang {
+.lang, .resume {
   font-family: var(--f-mono); font-size: 12px; font-weight: 500;
   color: var(--text-md);
   border: 1px solid var(--line);
@@ -170,7 +170,7 @@ html.js-anim .reveal.is-in { opacity: 1; transform: none; }
   padding: 6px 11px;
   transition: color .2s, border-color .2s;
 }
-.lang:hover { color: var(--acc); border-color: var(--acc-line); }
+.lang:hover, .resume:hover { color: var(--acc); border-color: var(--acc-line); }
 
 .burger { display: none; width: 34px; height: 34px; position: relative; }
 .burger span {
@@ -525,11 +525,11 @@ html.js-anim .reveal.is-in { opacity: 1; transform: none; }
 .noscript a { color: var(--acc); text-decoration: underline; }
 
 /* ══ RESPONSIVE ════════════════════════════════════════════════════════ */
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .about { grid-template-columns: 1fr; gap: 36px; }
 }
 
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
   .burger { display: block; }
 
   .nav__links {
@@ -552,9 +552,39 @@ html.js-anim .reveal.is-in { opacity: 1; transform: none; }
   .hero__scroll { display: none; }
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
   .wrap, .nav__inner { padding-inline: 18px; }
   .btn { flex: 1 1 100%; }
   .facts__row { flex-direction: column; gap: 3px; }
   .facts__row dd { text-align: left; }
+}
+
+/* ══ PRINT ═════════════════════════════════════════════════════════════════
+   หน้านี้เป็นเว็บ ไม่ใช่เอกสาร — เรซูเม่ที่จัดหน้ามาสำหรับกระดาษอยู่ที่
+   resume.html แล้ว บล็อกนี้แค่กันไม่ให้ผลลัพธ์ที่พิมพ์ออกมาอ่านไม่ออก
+   ถ้าใครกด Ctrl+P บนหน้านี้                                                */
+@media print {
+  :root {
+    --bg: #fff; --bg-alt: #fff; --bg-card: #fff; --bg-raised: #fff;
+    --text-hi: #111; --text-md: #333; --text-lo: #555;
+    --acc: #0a6b60; --acc-lt: #0a6b60; --acc-dim: transparent; --acc-line: #b5d6d1;
+    --acc2: #8a4a12; --acc2-dim: transparent; --acc2-line: #ddc0a0;
+    --line: #c9c9c9; --line-soft: #e6e6e6;
+  }
+
+  @page { size: A4; margin: 14mm; }
+  body { font-size: 10.5pt; overflow: visible; }
+
+  /* บล็อกที่ผู้ใช้ยังเลื่อนไปไม่ถึงค้างอยู่ที่ opacity 0 ถ้าไม่ปลดตรงนี้
+     ส่วนที่ยังไม่ถูก reveal จะพิมพ์ออกมาเป็นหน้าว่าง */
+  html.js-anim .reveal,
+  html.js-anim .reveal.is-in { opacity: 1 !important; transform: none !important; }
+
+  .nav, .skip-link, .foot, .noscript,
+  .hero__grid, .hero__scroll, .hero__cta { display: none !important; }
+
+  .wrap { max-width: none; padding-inline: 0; }
+  .hero { min-height: 0; padding-block: 0 20px; }
+  .sec { padding-block: 20px; }
+  .skill, .proj, .tl { break-inside: avoid; }
 }

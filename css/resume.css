@@ -1,0 +1,363 @@
+/* ============================================================================
+   resume.css — เรซูเม่หน้าเดียวจบ สองคอลัมน์ พิมพ์ลง A4 ได้ตรง ๆ
+   ============================================================================
+   เนื้อหาทั้งหมดยังมาจาก js/content.js ที่เดียวเหมือนเว็บหลัก
+   หน้านี้แค่จัดวางใหม่ให้เป็นรูปแบบเรซูเม่
+
+   สีชุดนี้แยกจาก site.css ตั้งใจ — เว็บเป็นธีมมืด แต่เรซูเม่ต้องเป็นหมึกบน
+   กระดาษขาว มีแค่แถบซ้ายที่เป็นสีเข้ม                                       */
+
+:root {
+  --rail-w:   62mm;      /* ความกว้างคอลัมน์ซ้าย */
+  --sheet-w:  210mm;     /* A4 */
+  --pad:      7.5mm;
+
+  --rail:     #24404e;   /* น้ำเงินอมเทาเข้ม ให้เข้ากับธีมมืดของเว็บหลัก */
+  --rail-2:   #1b3240;
+  --on-rail:  #e8f0ef;
+  --on-rail-2:#9fb6bd;
+
+  --acc:      #4fd1c5;   /* มิ้นต์ ตัวเดียวกับเว็บหลัก */
+  --acc-ink:  #17706a;   /* มิ้นต์เวอร์ชันเข้ม ใช้บนพื้นขาวให้อ่านออก */
+
+  --ink:      #1a1f21;
+  --ink-2:    #3f4a4d;
+  --ink-3:    #6b7679;
+  --line:     #d8dee0;
+
+  --f-disp: "Space Grotesk", "Noto Sans Thai", system-ui, sans-serif;
+  --f-body: "Inter", "Noto Sans Thai", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+body {
+  background: #6b7276;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 10.4pt;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding: 88px 16px 48px;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; padding: 0; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; }
+
+/* ══ TOOLBAR ════════════════════════════════════════════════════════════ */
+.bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 12px 20px;
+  background: rgba(7, 11, 13, .92);
+  backdrop-filter: blur(12px);
+  color: #e6edea;
+  font-size: 14px;
+}
+.bar__back { color: #8a9a97; transition: color .2s; }
+.bar__back:hover { color: var(--acc); }
+.bar__actions { display: flex; gap: 10px; }
+.bar__btn {
+  font-size: 13px; font-weight: 600;
+  border: 1px solid #1a2427; border-radius: 8px;
+  padding: 8px 16px;
+  color: #e6edea;
+  transition: border-color .2s, color .2s, background .2s;
+}
+.bar__btn:hover { border-color: rgba(79,209,197,.3); color: var(--acc); }
+.bar__btn--solid { background: var(--acc); border-color: var(--acc); color: #04100e; }
+.bar__btn--solid:hover { background: #7ee3d8; border-color: #7ee3d8; color: #04100e; }
+
+/* ══ กระดาษ ═════════════════════════════════════════════════════════════ */
+.sheet {
+  position: relative;
+  width: var(--sheet-w);
+  min-height: 297mm;
+  margin-inline: auto;
+  background: #fff;
+  display: grid;
+  grid-template-columns: var(--rail-w) 1fr;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+  overflow: hidden;
+}
+
+/* แถบสีคอลัมน์ซ้าย อยู่นอก flow เพื่อให้ลากเต็มความสูงเสมอ
+   ตอนพิมพ์จะเปลี่ยนเป็น fixed เพื่อให้ซ้ำทุกหน้า */
+.rail-bg {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: var(--rail-w);
+  background: linear-gradient(180deg, var(--rail), var(--rail-2));
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ══ คอลัมน์ซ้าย ════════════════════════════════════════════════════════ */
+.rail {
+  position: relative;   /* ให้อยู่เหนือ .rail-bg */
+  padding: var(--pad) 9mm var(--pad) 10mm;
+  color: var(--on-rail);
+}
+
+.photo {
+  width: 31mm; height: 31mm;
+  margin: 0 auto 5mm;
+  border-radius: 50%;
+  overflow: hidden;
+  /* รูปพื้นหลังขาววางบนแถบเข้ม ขอบขาวจะกลืนหาย ใช้มิ้นต์ให้เห็นวงชัด */
+  border: 2px solid rgba(79, 209, 197, .55);
+  background: rgba(255, 255, 255, .08);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
+.photo:empty, .photo.is-off { display: none; }
+
+.rail__sec { margin-bottom: 4mm; break-inside: avoid; }
+.rail__sec[hidden] { display: none; }
+
+.rail__h {
+  font-family: var(--f-disp);
+  font-size: 11.5pt; font-weight: 700;
+  letter-spacing: .09em; text-transform: uppercase;
+  padding-bottom: 1.4mm; margin-bottom: 2.6mm;
+  border-bottom: 1.2px solid rgba(255, 255, 255, .3);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ติดต่อ */
+.cx li {
+  display: flex; align-items: flex-start; gap: 2.5mm;
+  margin-bottom: 1.6mm;
+  font-size: 8.8pt; line-height: 1.32;
+  color: var(--on-rail);
+  word-break: break-word;
+}
+.cx svg {
+  flex: none; width: 3.6mm; height: 3.6mm; margin-top: .5mm;
+  fill: var(--acc);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* การศึกษา */
+.edu { margin-bottom: 3mm; }
+.edu:last-child { margin-bottom: 0; }
+.edu__period {
+  font-size: 8.5pt; font-weight: 700; letter-spacing: .05em;
+  color: var(--acc);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.edu__degree { font-size: 9.5pt; font-weight: 700; line-height: 1.35; }
+.edu__place { font-size: 8.8pt; color: var(--on-rail-2); line-height: 1.4; }
+
+/* ทักษะ */
+.sk { margin-bottom: 1.8mm; }
+.sk:last-child { margin-bottom: 0; }
+.sk__name {
+  font-size: 8.8pt; font-weight: 700;
+  letter-spacing: .04em;
+  margin-bottom: .3mm;
+}
+.sk__items { font-size: 8pt; color: var(--on-rail-2); line-height: 1.32; }
+
+/* รายการหัวข้อย่อยบนแถบซ้าย */
+.bul li {
+  position: relative;
+  padding-left: 3.4mm;
+  font-size: 8.6pt; line-height: 1.38;
+  margin-bottom: .8mm;
+}
+.bul li::before {
+  content: ""; position: absolute; left: 0; top: 1.7mm;
+  width: 1.4mm; height: 1.4mm; border-radius: 50%;
+  background: var(--acc);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ══ คอลัมน์ขวา ═════════════════════════════════════════════════════════ */
+.body { padding: var(--pad) 11mm var(--pad) 9mm; }
+
+.head { margin-bottom: 6mm; }
+.head__name {
+  font-family: var(--f-disp);
+  font-size: 25pt; font-weight: 400;
+  letter-spacing: .04em; line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.head__name b { font-weight: 700; color: var(--ink); }
+.head__role {
+  font-size: 12pt; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--ink-2);
+  margin-top: 1.5mm;
+}
+.head__rule {
+  display: block; width: 22mm; height: 1.2mm;
+  background: var(--rail);
+  margin-top: 3mm;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.sec { margin-bottom: 5.5mm; }
+.sec[hidden] { display: none; }
+.sec__h {
+  font-family: var(--f-disp);
+  font-size: 13pt; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--rail);
+  padding-bottom: 1.6mm; margin-bottom: 3.5mm;
+  border-bottom: 1.5px solid var(--line);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+#profileBody p { color: var(--ink-2); text-align: justify; }
+#profileBody p + p { margin-top: 2.6mm; }
+
+/* งานและผลงาน ใช้โครงเดียวกัน */
+.jobs > li {
+  position: relative;
+  padding-left: 6mm;
+  padding-bottom: 5mm;
+  break-inside: avoid;
+}
+.jobs > li:last-child { padding-bottom: 0; }
+.jobs > li::before {
+  content: ""; position: absolute; left: 0; top: 1.8mm;
+  width: 2mm; height: 2mm; border-radius: 50%;
+  background: var(--rail);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.jobs > li::after {
+  content: ""; position: absolute; left: .9mm; top: 5mm; bottom: 1mm;
+  width: .3mm; background: var(--line);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.jobs > li:last-child::after { display: none; }
+
+.job__top {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 5mm;
+}
+.job__org { font-size: 11pt; font-weight: 700; color: var(--ink); }
+.job__period {
+  flex: none;
+  font-size: 8.8pt; font-weight: 600; letter-spacing: .04em;
+  color: var(--ink-3);
+}
+.job__role { font-size: 10pt; color: var(--ink-2); margin-bottom: 1.6mm; }
+.job__desc { font-size: 9.6pt; color: var(--ink-2); text-align: justify; }
+
+.job__points { margin-top: 1.6mm; }
+.job__points li {
+  position: relative; padding-left: 4mm;
+  font-size: 9.6pt; color: var(--ink-2); line-height: 1.45;
+  margin-bottom: 1mm;
+}
+.job__points li::before {
+  content: ""; position: absolute; left: 0; top: 1.7mm;
+  width: 1.3mm; height: 1.3mm; border-radius: 50%;
+  background: var(--ink-3);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 1.4mm; margin-top: 2mm; }
+.tag {
+  font-size: 8pt; letter-spacing: .02em;
+  color: var(--acc-ink);
+  border: .3mm solid #bfe0dc;
+  border-radius: 1mm;
+  padding: .3mm 1.6mm;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.job__links { margin-top: 1.8mm; font-size: 8.6pt; color: var(--ink-3); }
+.job__links span + span::before { content: "  ·  "; }
+
+/* วิธีทำงาน — ปิดท้ายคอลัมน์ขวา */
+.how li {
+  position: relative;
+  padding-left: 5mm;
+  font-size: 9.6pt; color: var(--ink-2); line-height: 1.45;
+  margin-bottom: 1.3mm;
+}
+.how li:last-child { margin-bottom: 0; }
+.how li::before {
+  content: ""; position: absolute; left: 0; top: 1.9mm;
+  width: 2mm; height: 2mm; border-radius: 50%;
+  background: var(--rail);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.noscript {
+  max-width: 60ch; margin: 40px auto; padding: 20px;
+  background: #fff; border-radius: 8px; text-align: center;
+}
+.noscript a { color: var(--acc-ink); text-decoration: underline; }
+
+/* ══ จอเล็ก — ย่อกระดาษให้พอดีจอ ═══════════════════════════════════════
+   ต้องมี `screen and` เสมอ ห้ามตัดทิ้ง — กระดาษ A4 ที่ 96dpi กว้าง 794px
+   ถ้าเขียนแค่ (max-width: 900px) กฎพวกนี้จะไปทับตอนพิมพ์ด้วย แล้วเลย์เอาต์
+   บนกระดาษจะกลายเป็นแบบจอมือถือโดยไม่รู้ตัว                              */
+@media screen and (max-width: 900px) {
+  body { padding: 78px 0 32px; }
+  .sheet {
+    width: 100%;
+    min-height: 0;
+    --rail-w: 34%;
+    --pad: 6mm;
+    box-shadow: none;
+  }
+  .head__name { font-size: 19pt; }
+  .head__role { font-size: 10pt; }
+  .photo { width: 30mm; height: 30mm; }
+}
+
+@media screen and (max-width: 620px) {
+  /* แคบเกินกว่าจะแบ่งสองคอลัมน์แล้วยังอ่านออก สลับเป็นเรียงลงมาแทน
+     ตรงนี้ให้ .rail ถือพื้นหลังเอง จะได้ไม่ต้องพึ่งความสูงที่คำนวณจาก JS */
+  .sheet { grid-template-columns: 1fr; }
+  .rail-bg { display: none; }
+  .rail {
+    background: linear-gradient(180deg, var(--rail), var(--rail-2));
+    padding: 7mm 6mm;
+  }
+  .body { padding: 7mm 6mm; }
+}
+
+/* ══ พิมพ์ ═══════════════════════════════════════════════════════════════ */
+@media print {
+  @page { size: A4; margin: 0; }
+
+  body { background: #fff; padding: 0; font-size: 10.4pt; }
+  .bar, .noscript { display: none !important; }
+
+  .sheet {
+    width: auto; min-height: 0;
+    margin: 0; box-shadow: none; overflow: visible;
+    grid-template-columns: var(--rail-w) 1fr;
+  }
+
+  /* fixed ทำให้แถบสีถูกวาดซ้ำทุกหน้ากระดาษ ไม่ใช่แค่หน้าแรก */
+  .rail-bg { position: fixed; top: 0; left: 0; bottom: 0; height: auto; }
+
+  /* บังคับให้พิมพ์พื้นหลังออกมาด้วย ถ้าเบราว์เซอร์ยอม
+     ถ้าแถบซ้ายออกมาขาว ให้ติ๊ก "Background graphics" ในหน้าต่างพิมพ์ */
+  * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+
+  .rail__sec, .jobs > li, .edu, .sk { break-inside: avoid; }
+  h1, h2 { break-after: avoid; }
+}
