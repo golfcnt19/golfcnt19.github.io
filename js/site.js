@@ -38,7 +38,10 @@
     var saved;
     try { saved = localStorage.getItem(STORE_KEY); } catch (e) { /* private mode */ }
     if (LANGS.indexOf(saved) !== -1) return saved;
-    return (navigator.language || "").toLowerCase().indexOf("th") === 0 ? "th" : "en";
+    // ตั้งใจให้เป็นอังกฤษเสมอสำหรับคนที่เพิ่งเข้ามาครั้งแรก ไม่ได้ดูภาษาของเบราว์เซอร์
+    // เพราะคนอ่านพอร์ตส่วนใหญ่คือ recruiter ที่อ่านอังกฤษ ใครอยากได้ไทยกดสลับได้
+    // แล้วระบบจะจำไว้ใน localStorage
+    return "en";
   }
 
   function saveLang(l) {

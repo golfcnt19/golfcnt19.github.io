@@ -8,6 +8,10 @@
   var LANGS = ["en", "th"];
   var STORE_KEY = "portfolio.lang";   // ใช้คีย์เดียวกับเว็บหลัก เลือกภาษาแล้วจำข้ามหน้า
 
+  /* เรซูเม่เอาไว้ส่งบริษัท เปิดมาต้องเป็นอังกฤษเสมอสำหรับคนที่ยังไม่เคยเลือกภาษา
+     ไม่ได้ดูภาษาของเบราว์เซอร์ ใครอยากได้ไทยกดสลับได้แล้วระบบจำไว้ให้ */
+  var DEFAULT_LANG = "en";
+
   var $  = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
@@ -34,7 +38,7 @@
     var saved;
     try { saved = localStorage.getItem(STORE_KEY); } catch (e) { /* private mode */ }
     if (LANGS.indexOf(saved) !== -1) return saved;
-    return (navigator.language || "").toLowerCase().indexOf("th") === 0 ? "th" : "en";
+    return DEFAULT_LANG;
   }
 
   function saveLang(l) {
