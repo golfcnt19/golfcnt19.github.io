@@ -134,3 +134,12 @@ push ขึ้น `main` แล้วรอ 1–2 นาที Pages อัป�
   ตรงนี้คือจุดที่คนอ่านพอร์ตสนใจที่สุด
 - `meta.links` LinkedIn ยังเว้นว่าง
 - ปีที่เรียน ม.บูรพา ยังไม่ได้ใส่ (`period` เว้นว่างได้ บรรทัดจะไม่แสดง)
+
+## Cache-busting
+
+`index.html` และ `resume.html` โหลด css/js ด้วย `?v=<stamp>` — **แก้ `content.js` / `site.js` / css เมื่อไหร่
+ต้องเปลี่ยน stamp ในทั้งสองไฟล์ด้วย** ไม่งั้นคนที่เคยเปิดเว็บจะเห็นตัวเก่าไปอีก 10 นาที (Pages ส่ง `max-age=600`)
+
+```bash
+sed -i -E 's/\?v=[0-9a-z]+"/?v=NEWSTAMP"/g' index.html resume.html
+```
