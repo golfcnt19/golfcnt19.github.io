@@ -135,6 +135,18 @@ const CONTENT = {
           live: "https://golfcnt19.github.io/expense-tracker/",
           highlight: true,
         },
+        {
+          name: "Run Challenge",
+          kind: "Web App · Serverless",
+          desc:
+            "เว็บนับคะแนนกิจกรรมวิ่ง 7 ทีมสำหรับใช้จริงในทีมงาน — ใช้ Google Sheets เป็นฐานข้อมูล " +
+            "และ Apps Script เป็น API ตรวจ PIN ก่อนบันทึก ไม่มีเซิร์ฟเวอร์ ค่าใช้จ่ายศูนย์ " +
+            "คิดคะแนนตามกติกา (เพดานรายวัน การ์ดพิเศษ) ฝั่ง client ล้วน แสดงเป็นสนามแข่งและกราฟรายวัน",
+          tags: ["JavaScript", "Google Sheets", "Apps Script", "GitHub Pages", "GitHub Actions"],
+          repo: "https://github.com/golfcnt19/run-challenge",
+          live: "https://golfcnt19.github.io/run-challenge/",
+          highlight: false,
+        },
       ],
     },
 
@@ -346,6 +358,19 @@ const CONTENT = {
           repo: "https://github.com/golfcnt19/expense-tracker",
           live: "https://golfcnt19.github.io/expense-tracker/",
           highlight: true,
+        },
+        {
+          name: "Run Challenge",
+          kind: "Web App · Serverless",
+          desc:
+            "A 7-team running leaderboard built for real use at work. Google Sheets is the " +
+            "database and Apps Script is the PIN-checked write API — no server, zero cost. " +
+            "Scoring rules (daily caps, power-up cards) run entirely on the client, rendered " +
+            "as a race track and daily charts.",
+          tags: ["JavaScript", "Google Sheets", "Apps Script", "GitHub Pages", "GitHub Actions"],
+          repo: "https://github.com/golfcnt19/run-challenge",
+          live: "https://golfcnt19.github.io/run-challenge/",
+          highlight: false,
         },
       ],
     },
