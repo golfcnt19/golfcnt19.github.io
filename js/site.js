@@ -130,6 +130,7 @@
       var links = "";
       if (p.repo) links += '<a class="proj__link" href="' + esc(p.repo) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.viewRepo) + " &#8599;</a>";
       if (p.live) links += '<a class="proj__link" href="' + esc(p.live) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.viewLive) + " &#8599;</a>";
+      if (p.mobile) links += '<a class="proj__link" href="' + esc(p.mobile) + '" target="_blank" rel="noopener noreferrer">' + esc(ui.viewMobile) + " &#8599;</a>";
 
       return '<article class="proj reveal' + (p.highlight ? " proj--hl" : "") + '">' +
         '<div class="proj__top">' +

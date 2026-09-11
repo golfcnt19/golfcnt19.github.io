@@ -133,6 +133,7 @@ const CONTENT = {
           tags: ["Kotlin", "Spring Boot", "Angular", "Flutter", "PostgreSQL", "JMeter"],
           repo: "https://github.com/golfcnt19/expense-tracker",
           live: "https://golfcnt19.github.io/expense-tracker/",
+          mobile: "https://golfcnt19.github.io/expense-tracker/mobile/",  // ปุ่มที่สาม — ลบบรรทัดนี้ถ้าไม่มี
           highlight: true,
         },
         {
@@ -258,6 +259,7 @@ const CONTENT = {
       menu: "เมนู",
       viewRepo: "ดูโค้ด",
       viewLive: "เปิดเว็บ",
+      viewMobile: "เปิดแอป",
     },
   },
 
@@ -357,6 +359,7 @@ const CONTENT = {
           tags: ["Kotlin", "Spring Boot", "Angular", "Flutter", "PostgreSQL", "JMeter"],
           repo: "https://github.com/golfcnt19/expense-tracker",
           live: "https://golfcnt19.github.io/expense-tracker/",
+          mobile: "https://golfcnt19.github.io/expense-tracker/mobile/",  // ปุ่มที่สาม — ลบบรรทัดนี้ถ้าไม่มี
           highlight: true,
         },
         {
@@ -472,6 +475,7 @@ const CONTENT = {
       menu: "Menu",
       viewRepo: "Code",
       viewLive: "Live",
+      viewMobile: "App",
     },
   },
 };
